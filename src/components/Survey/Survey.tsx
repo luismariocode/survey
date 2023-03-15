@@ -87,50 +87,6 @@ function handleSurveyConfirmation() {
 }
   
 
-  // const entries = location.state?.entriesProps?.entries || {};
-  // const prevQuestion = location.state?.entriesProps?.prevQuestion || {};
-  // const currentQuestion = location.state?.entriesProps?.currentQuestion || {}
-  // const nextQuestion = location.state?.entriesProps?.nextQuestion || {}
-
-  // const [entryValues, setEntryValues] = useState<EntryValues>(entries);
-  // const [indexNext, setIndexNext] = useState<IndexValues>(nextQuestion);
-  // const [indexCurrent, setIndexCurrent] = useState<IndexValues>(currentQuestion);
-  // const [indexPrev, setIndexPrev] = useState<IndexValues>(prevQuestion);
-
-
-  // console.log(indexNext)
-
-  // setIndexCurrent({ indexPath: indexNext["indexPath"], indexRender: indexNext["indexRender"],});
-
-  
-  // function handleStatementChange() {}
-
-  // function handlePrevChange() { }
-
-  // function handleSurveyConfirmation() { }
-
-  //   setIndexCurrent({ indexPath: indexNext["indexPath"], indexRender: indexNext["indexRender"],});
-  //   setIndexPrev({ indexPath: indexCurrent["indexPath"], indexRender: indexCurrent["indexRender"],});
-  //   setIndexNext({ indexPath: indexNext["indexPath"] + 1, indexRender: indexNext["indexRender"] + 1,});
-  //   navigate("/pregunta/"+indexNext["indexPath"]);
-  // }
-
-
-  // const navigate = useNavigate();
-
-  // async function handleStatementChange() {
-  //   setCurrentIndex((prevIndex) => prevIndex + 1);
-  //   const newQuestionIndex = currentIndex;
-  //   localStorage.setItem("currentQuestion", `${newQuestionIndex}`);
-  //   navigate(`/pregunta/${newQuestionIndex}`);
-  // }
-
-  // function handlePrevChange() {
-  //   const newQuestionIndex = currentIndex - 2;
-  //   localStorage.setItem("currentQuestion", `${newQuestionIndex}`);
-  //   navigate(`/pregunta/${newQuestionIndex}`, { replace: true });
-  //   setCurrentIndex((prevIndex) => prevIndex - 1);
-  // }
 
   
 
@@ -138,7 +94,7 @@ function handleSurveyConfirmation() {
   return (
     <div className="container__survey">
       <Routes>
-        {dataSurvey[currentQuestionValue["indexRender"]] && (
+        {dataSurvey[currentQuestionValue["indexPath"]] && (
 
           <Route
 
@@ -148,12 +104,12 @@ function handleSurveyConfirmation() {
                 <div className="count__survey">{currentQuestionValue["indexPath"]}/{dataSurvey.length}</div>
                 {/* {console.log('pregunta actual', dataSurvey)}    */}
                 <Statement
-                  key={dataSurvey[currentQuestionValue["indexRender"]].entrie}
-                  entrie={dataSurvey[currentQuestionValue["indexRender"]].entrie}
-                  description={dataSurvey[currentQuestionValue["indexRender"]].description}
-                  number={dataSurvey[currentQuestionValue["indexRender"]].number}
-                  newIndex={dataSurvey[currentQuestionValue["indexRender"]].newIndex}
-                  options={dataSurvey[currentQuestionValue["indexRender"]].options}
+                  key={dataSurvey[currentQuestionValue["indexPath"]].entrie}
+                  entrie={dataSurvey[currentQuestionValue["indexPath"]].entrie}
+                  description={dataSurvey[currentQuestionValue["indexPath"]].description}
+                  number={dataSurvey[currentQuestionValue["indexPath"]].number}
+                  newIndex={dataSurvey[currentQuestionValue["indexPath"]].newIndex}
+                  options={dataSurvey[currentQuestionValue["indexPath"]].options}
                   answered={false}
                 />
                 {currentQuestionValue["indexPath"] > 1 && (
