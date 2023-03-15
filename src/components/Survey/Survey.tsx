@@ -66,8 +66,8 @@ const Survey: React.FC = () => {
 
     // actualizar los estados de indexPrev, indexCurrent y indexNext
     setIndexPrev({
-      indexPath: prevQuestionValue.indexPath,
-      indexRender: prevQuestionValue.indexRender,
+      indexPath: prevQuestionValue.indexPath-1,
+      indexRender: prevQuestionValue.indexRender-1,
     });
     setIndexCurrent({
       indexPath: prevQuestionValue.indexPath,
@@ -79,7 +79,7 @@ const Survey: React.FC = () => {
     });
 
     // navegar a la pregunta previa
-    navigate(`/pregunta/${prevQuestionValue.indexPath}`);
+    navigate(`/pregunta/${indexCurrent.indexPath}`);
   }
 
 function handleSurveyConfirmation() {
@@ -115,7 +115,7 @@ function handleSurveyConfirmation() {
                 {currentQuestionValue["indexPath"] > 1 && (
                   <button className="button-prev" onClick={handlePrevChange}>Anterior</button>
                 )}
-                {dataSurvey.length == currentQuestionValue["indexPath"] ? (
+                {dataSurvey.length == currentQuestionValue["indexPath"]-1 ? (
                   <button className="button-next" onClick={handleSurveyConfirmation}>Validar</button>
                 ) :
                   <button
