@@ -86,7 +86,7 @@ function handleSurveyConfirmation() {
             path="/pregunta/:paramIndex"
             element={
               <>
-                console.log(dataSurvey.length)
+                {console.log(dataSurvey.length)}
                 <div className="count__survey">{currentQuestionValue["indexPath"]}/{dataSurvey.length}</div>
                 {/* {console.log('pregunta actual', dataSurvey)}    */}
                 <Statement
