@@ -88,21 +88,21 @@ function handleSurveyConfirmation() {
             element={
               <>
                 {console.log(dataSurvey.length)}
-                <div className="count__survey">{currentQuestionValue["indexPath"]}/{dataSurvey.length}</div>
+                <div className="count__survey">{parseInt(param)}/{dataSurvey.length}</div>
                 {/* {console.log('pregunta actual', dataSurvey)}    */}
                 <Statement
-                  key={dataSurvey[parseInt(param)].entrie}
-                  entrie={dataSurvey[parseInt(param)].entrie}
-                  description={dataSurvey[parseInt(param)].description}
-                  number={dataSurvey[parseInt(param)].number}
-                  newIndex={dataSurvey[parseInt(param)].newIndex}
-                  options={dataSurvey[parseInt(param)].options}
+                  key={dataSurvey[parseInt(param)-1].entrie}
+                  entrie={dataSurvey[parseInt(param)-1].entrie}
+                  description={dataSurvey[parseInt(param)-1].description}
+                  number={dataSurvey[parseInt(param)-1].number}
+                  newIndex={dataSurvey[parseInt(param)-1].newIndex}
+                  options={dataSurvey[parseInt(param)-1].options}
                   answered={false}
                 />
                 {parseInt(param) > 1 && (
                   <button className="button-prev" onClick={handlePrevChange}>Anterior</button>
                 )}
-                {dataSurvey.length == (parseInt(param)-1) ? (
+                {dataSurvey.length+1 == (parseInt(param)) ? (
                   <button className="button-next" onClick={handleSurveyConfirmation}>Validar</button>
                 ) :
                   <button
