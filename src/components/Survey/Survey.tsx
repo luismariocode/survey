@@ -86,6 +86,7 @@ function handleSurveyConfirmation() {
             path="/pregunta/:paramIndex"
             element={
               <>
+                console.log(dataSurvey.length)
                 <div className="count__survey">{currentQuestionValue["indexPath"]}/{dataSurvey.length}</div>
                 {/* {console.log('pregunta actual', dataSurvey)}    */}
                 <Statement
@@ -100,7 +101,7 @@ function handleSurveyConfirmation() {
                 {currentQuestionValue["indexPath"] > 1 && (
                   <button className="button-prev" onClick={handlePrevChange}>Anterior</button>
                 )}
-                {dataSurvey.length == currentQuestionValue["indexPath"] ? (
+                {dataSurvey.length == nextQuestionValue["indexPath"] ? (
                   <button className="button-next" onClick={handleSurveyConfirmation}>Validar</button>
                 ) :
                   <button
