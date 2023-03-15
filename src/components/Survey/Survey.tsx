@@ -11,6 +11,7 @@ const dataSurvey = shuffleStatements(data);
 const Survey: React.FC = () => {
   const navigate = useNavigate();
   const location = useLocation()
+  const param = useParams();  
 
   const nextQuestionValue = JSON.parse(localStorage.getItem('nextQuestion') || '{}');
 
@@ -79,7 +80,7 @@ function handleSurveyConfirmation() {
   return (
     <div className="container__survey">
       <Routes>
-        {dataSurvey[currentQuestionValue["indexPath"]] && (
+        {dataSurvey[param] && (
 
           <Route
 
