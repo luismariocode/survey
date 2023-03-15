@@ -1,0 +1,187 @@
+import React, { useEffect, useState } from "react";
+import { Routes, Route, useNavigate, Outlet, useParams, useLocation } from "react-router-dom";
+import shuffleStatements from "./scripts/scripts";
+import Statement from "./Statement";
+import { StatementProps, EntryValues, IndexValues } from "./types/types";
+import data from "../../server/statement.json";
+const dataSurvey = shuffleStatements(data);
+
+
+
+const Survey: React.FC = () => {
+  const navigate = useNavigate();
+  const location = useLocation()
+
+  const nextQuestionValue = JSON.parse(localStorage.getItem('nextQuestion') || '{}');
+
+  const [indexCurrent, setIndexCurrent] = useState<IndexValues>(nextQuestionValue);
+  const [indexPrev, setIndexPrev] = useState<IndexValues>({ indexPath: nextQuestionValue["indexPath"], indexRender: nextQuestionValue["indexRender"] });
+  const [indexNext, setIndexNext] = useState<IndexValues>({ indexPath: 1, indexRender: 1 });
+
+
+
+  const currentQuestionValue = location.state?.entriesProps?.currentQuestion || {
+    indexPath: nextQuestionValue["indexPath"],
+    indexRender: nextQuestionValue["indexRender"],
+  };
+
+
+
+  function handleStatementChange() {
+    // obtener el valor actual de nextQuestion del localStorage
+    const nextQuestionValue = JSON.parse(localStorage.getItem('nextQuestion') || '{}');
+
+    // actualizar la propiedad indexPath en 1
+    nextQuestionValue.indexPath += 1;
+
+    // guardar el valor actualizado de nextQuestion en el localStorage
+    localStorage.setItem('nextQuestion', JSON.stringify(nextQuestionValue));
+
+    // actualizar los estados de indexPrev, indexCurrent y indexNext
+    setIndexPrev({
+      indexPath: indexCurrent.indexPath,
+      indexRender: indexCurrent.indexRender,
+    });
+    setIndexCurrent({
+      indexPath: nextQuestionValue.indexPath,
+      indexRender: nextQuestionValue.indexRender,
+    });
+    setIndexNext({
+      indexPath: nextQuestionValue.indexPath + 1,
+      indexRender: nextQuestionValue.indexRender + 1,
+    });
+
+    // navegar a la siguiente pregunta
+    navigate(`/pregunta/${nextQuestionValue.indexPath}`);
+  }
+
+  function handlePrevChange() {
+    const prevQuestionValue = JSON.parse(localStorage.getItem("prevQuestion") || "{}");
+
+    // actualizar la propiedad indexPath en -1
+    prevQuestionValue.indexPath -= 1;
+
+    // guardar el valor actualizado de prevQuestion en el localStorage
+    localStorage.setItem("prevQuestion", JSON.stringify(prevQuestionValue));
+
+    // actualizar los estados de indexPrev, indexCurrent y indexNext
+    setIndexPrev({
+      indexPath: prevQuestionValue.indexPath,
+      indexRender: prevQuestionValue.indexRender,
+    });
+    setIndexCurrent({
+      indexPath: prevQuestionValue.indexPath,
+      indexRender: prevQuestionValue.indexRender,
+    });
+    setIndexNext({
+      indexPath: indexCurrent.indexPath,
+      indexRender: indexCurrent.indexRender,
+    });
+
+    // navegar a la pregunta previa
+    navigate(`/pregunta/${prevQuestionValue.indexPath}`);
+  }
+
+function handleSurveyConfirmation() {
+  navigate(`/validar`);
+}
+  
+
+  // const entries = location.state?.entriesProps?.entries || {};
+  // const prevQuestion = location.state?.entriesProps?.prevQuestion || {};
+  // const currentQuestion = location.state?.entriesProps?.currentQuestion || {}
+  // const nextQuestion = location.state?.entriesProps?.nextQuestion || {}
+
+  // const [entryValues, setEntryValues] = useState<EntryValues>(entries);
+  // const [indexNext, setIndexNext] = useState<IndexValues>(nextQuestion);
+  // const [indexCurrent, setIndexCurrent] = useState<IndexValues>(currentQuestion);
+  // const [indexPrev, setIndexPrev] = useState<IndexValues>(prevQuestion);
+
+
+  // console.log(indexNext)
+
+  // setIndexCurrent({ indexPath: indexNext["indexPath"], indexRender: indexNext["indexRender"],});
+
+  
+  // function handleStatementChange() {}
+
+  // function handlePrevChange() { }
+
+  // function handleSurveyConfirmation() { }
+
+  //   setIndexCurrent({ indexPath: indexNext["indexPath"], indexRender: indexNext["indexRender"],});
+  //   setIndexPrev({ indexPath: indexCurrent["indexPath"], indexRender: indexCurrent["indexRender"],});
+  //   setIndexNext({ indexPath: indexNext["indexPath"] + 1, indexRender: indexNext["indexRender"] + 1,});
+  //   navigate("/pregunta/"+indexNext["indexPath"]);
+  // }
+
+
+  // const navigate = useNavigate();
+
+  // async function handleStatementChange() {
+  //   setCurrentIndex((prevIndex) => prevIndex + 1);
+  //   const newQuestionIndex = currentIndex;
+  //   localStorage.setItem("currentQuestion", `${newQuestionIndex}`);
+  //   navigate(`/pregunta/${newQuestionIndex}`);
+  // }
+
+  // function handlePrevChange() {
+  //   const newQuestionIndex = currentIndex - 2;
+  //   localStorage.setItem("currentQuestion", `${newQuestionIndex}`);
+  //   navigate(`/pregunta/${newQuestionIndex}`, { replace: true });
+  //   setCurrentIndex((prevIndex) => prevIndex - 1);
+  // }
+
+  
+
+
+  return (
+    <div className="container__survey">
+      <Routes>
+        {dataSurvey[currentQuestionValue["indexRender"]] && (
+
+          <Route
+
+            path="/pregunta/:paramIndex"
+            element={
+              <>
+                <div className="count__survey">{currentQuestionValue["indexPath"]}/{dataSurvey.length}</div>
+                {/* {console.log('pregunta actual', dataSurvey)}    */}
+                <Statement
+                  key={dataSurvey[currentQuestionValue["indexRender"]].entrie}
+                  entrie={dataSurvey[currentQuestionValue["indexRender"]].entrie}
+                  description={dataSurvey[currentQuestionValue["indexRender"]].description}
+                  number={dataSurvey[currentQuestionValue["indexRender"]].number}
+                  newIndex={dataSurvey[currentQuestionValue["indexRender"]].newIndex}
+                  options={dataSurvey[currentQuestionValue["indexRender"]].options}
+                  answered={false}
+                />
+                {currentQuestionValue["indexPath"] > 1 && (
+                  <button className="button-prev" onClick={handlePrevChange}>Anterior</button>
+                )}
+                {dataSurvey.length == currentQuestionValue["indexPath"] ? (
+                  <button className="button-next" onClick={handleSurveyConfirmation}>Validar</button>
+                ) :
+                  <button
+                    className="button-next"
+                    onClick={handleStatementChange}
+                    // disabled={}
+                  // disabled={!dataSurvey[indexCurrent.indexRender].answered>
+                  >
+                    Siguiente
+                  </button>
+                }
+              </>
+            }
+            
+            
+          />
+        )}
+      </Routes>
+    </div>
+  );
+
+
+};
+
+export default Survey;
