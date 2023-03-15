@@ -80,7 +80,7 @@ function handleSurveyConfirmation() {
   return (
     <div className="container__survey">
       <Routes>
-        {dataSurvey[param] && (
+        {dataSurvey[parseInt(param)] && (
 
           <Route
 
@@ -102,7 +102,7 @@ function handleSurveyConfirmation() {
                 {currentQuestionValue["indexPath"] > 1 && (
                   <button className="button-prev" onClick={handlePrevChange}>Anterior</button>
                 )}
-                {dataSurvey.length == nextQuestionValue["indexPath"] ? (
+                {dataSurvey.length == parseInt(param) ? (
                   <button className="button-next" onClick={handleSurveyConfirmation}>Validar</button>
                 ) :
                   <button
