@@ -59,27 +59,12 @@ const Survey: React.FC = () => {
     const prevQuestionValue = JSON.parse(localStorage.getItem("prevQuestion") || "{}");
 
     // actualizar la propiedad indexPath en -1
-    prevQuestionValue.indexPath -= 1;
 
     // guardar el valor actualizado de prevQuestion en el localStorage
     localStorage.setItem("prevQuestion", JSON.stringify(prevQuestionValue));
 
-    // actualizar los estados de indexPrev, indexCurrent y indexNext
-    setIndexPrev({
-      indexPath: prevQuestionValue.indexPath-1,
-      indexRender: prevQuestionValue.indexRender-1,
-    });
-    setIndexCurrent({
-      indexPath: prevQuestionValue.indexPath,
-      indexRender: prevQuestionValue.indexRender,
-    });
-    setIndexNext({
-      indexPath: indexCurrent.indexPath,
-      indexRender: indexCurrent.indexRender,
-    });
-
     // navegar a la pregunta previa
-    navigate(`/pregunta/${indexCurrent.indexPath}`);
+    navigate(`/pregunta/${indexCurrent.indexPath}-1`);
   }
 
 function handleSurveyConfirmation() {
@@ -115,7 +100,7 @@ function handleSurveyConfirmation() {
                 {currentQuestionValue["indexPath"] > 1 && (
                   <button className="button-prev" onClick={handlePrevChange}>Anterior</button>
                 )}
-                {dataSurvey.length == currentQuestionValue["indexPath"]-2 ? (
+                {dataSurvey.length == currentQuestionValue["indexPath"] ? (
                   <button className="button-next" onClick={handleSurveyConfirmation}>Validar</button>
                 ) :
                   <button
