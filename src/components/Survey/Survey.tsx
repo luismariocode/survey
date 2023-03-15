@@ -65,7 +65,7 @@ const Survey: React.FC = () => {
     localStorage.setItem("prevQuestion", JSON.stringify(prevQuestionValue));
 
     // navegar a la pregunta previa
-    navigate(`/pregunta/${indexCurrent.indexPath-1}`);
+    navigate(`/pregunta/${parseInt(param)-1}`);
   }
 
 function handleSurveyConfirmation() {
