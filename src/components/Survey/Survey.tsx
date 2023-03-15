@@ -91,18 +91,18 @@ function handleSurveyConfirmation() {
                 <div className="count__survey">{currentQuestionValue["indexPath"]}/{dataSurvey.length}</div>
                 {/* {console.log('pregunta actual', dataSurvey)}    */}
                 <Statement
-                  key={dataSurvey[currentQuestionValue["indexPath"]].entrie}
-                  entrie={dataSurvey[currentQuestionValue["indexPath"]].entrie}
-                  description={dataSurvey[currentQuestionValue["indexPath"]].description}
-                  number={dataSurvey[currentQuestionValue["indexPath"]].number}
-                  newIndex={dataSurvey[currentQuestionValue["indexPath"]].newIndex}
-                  options={dataSurvey[currentQuestionValue["indexPath"]].options}
+                  key={dataSurvey[parseInt(param)].entrie}
+                  entrie={dataSurvey[parseInt(param)].entrie}
+                  description={dataSurvey[parseInt(param)].description}
+                  number={dataSurvey[parseInt(param)].number}
+                  newIndex={dataSurvey[parseInt(param)].newIndex}
+                  options={dataSurvey[parseInt(param)].options}
                   answered={false}
                 />
-                {currentQuestionValue["indexPath"] > 1 && (
+                {parseInt(param) > 1 && (
                   <button className="button-prev" onClick={handlePrevChange}>Anterior</button>
                 )}
-                {dataSurvey.length == parseInt(param) ? (
+                {dataSurvey.length == (parseInt(param)-1) ? (
                   <button className="button-next" onClick={handleSurveyConfirmation}>Validar</button>
                 ) :
                   <button
