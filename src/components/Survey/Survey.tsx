@@ -115,7 +115,7 @@ function handleSurveyConfirmation() {
                 {currentQuestionValue["indexPath"] > 1 && (
                   <button className="button-prev" onClick={handlePrevChange}>Anterior</button>
                 )}
-                {dataSurvey.length == currentQuestionValue["indexPath"]-1 ? (
+                {dataSurvey.length == currentQuestionValue["indexPath"]-2 ? (
                   <button className="button-next" onClick={handleSurveyConfirmation}>Validar</button>
                 ) :
                   <button
