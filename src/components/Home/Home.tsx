@@ -1,8 +1,13 @@
 import User from "./User";
+import dataSurvey from "../../server/server";
 
 const Home = () => {
+
+  dataSurvey();
+
   return (
   <>
+    
     <section className="home">
       <h1 className="home__titulo">
         Test de<br />

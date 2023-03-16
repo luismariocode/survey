@@ -7,14 +7,7 @@ export interface StatementProps {
   answered: boolean;
 }
 
-export interface StatementData {
-  entrie: string;
-  description: string;
-  number: number;
-  newIndex: number;
-  options: { label: string }[];
-  
-}
+
 
 export interface EntryValues {
   "entry.1591421491": string;

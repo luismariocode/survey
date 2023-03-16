@@ -1,130 +1,66 @@
 import React, { useEffect, useState } from "react";
 import { Routes, Route, useNavigate, Outlet, useParams, useLocation } from "react-router-dom";
-import shuffleStatements from "./scripts/scripts";
+// import shuffleStatements from "./scripts/scripts";
 import Statement from "./Statement";
 import { StatementProps, EntryValues, IndexValues } from "./types/types";
-import data from "../../server/statement.json";
-const dataSurvey = shuffleStatements(data);
+import  dataSurvey  from "../../server/server";
+// import data from "../../server/statement.json";
+// const dataSurvey = shuffleStatements(data);
 
 
 
 const Survey: React.FC = () => {
   const navigate = useNavigate();
-  const location = useLocation()
-  const param = useParams();  
+  const param = useParams();
 
-  const nextQuestionValue = JSON.parse(localStorage.getItem('nextQuestion') || '{}');
+  const nextQuestionValue = JSON.parse(localStorage.getItem("nextQuestion") || "{}");
+  const dataSurvey = JSON.parse(localStorage.getItem("data") || "[]");
 
-  const [indexCurrent, setIndexCurrent] = useState<IndexValues>(nextQuestionValue);
-  const [indexPrev, setIndexPrev] = useState<IndexValues>({ indexPath: nextQuestionValue["indexPath"], indexRender: nextQuestionValue["indexRender"] });
-  const [indexNext, setIndexNext] = useState<IndexValues>({ indexPath: 1, indexRender: 1 });
-
-
-
-  const currentQuestionValue = location.state?.entriesProps?.currentQuestion || {
-    indexPath: nextQuestionValue["indexPath"],
-    indexRender: nextQuestionValue["indexRender"],
-  };
-
-
+  const [indexValue, setIndexValue] = useState<IndexValues>(nextQuestionValue);
 
   function handleStatementChange() {
-    // obtener el valor actual de nextQuestion del localStorage
-    const nextQuestionValue = JSON.parse(localStorage.getItem('nextQuestion') || '{}');
-
-    // actualizar la propiedad indexPath en 1
-    nextQuestionValue.indexPath += 1;
-
-    // guardar el valor actualizado de nextQuestion en el localStorage
-    localStorage.setItem('nextQuestion', JSON.stringify(nextQuestionValue));
-
-    // actualizar los estados de indexPrev, indexCurrent y indexNext
-    setIndexPrev({
-      indexPath: indexCurrent.indexPath,
-      indexRender: indexCurrent.indexRender,
-    });
-    setIndexCurrent({
-      indexPath: nextQuestionValue.indexPath,
-      indexRender: nextQuestionValue.indexRender,
-    });
-    setIndexNext({
-      indexPath: nextQuestionValue.indexPath + 1,
-      indexRender: nextQuestionValue.indexRender + 1,
-    });
-
-    // navegar a la siguiente pregunta
-    navigate(`/pregunta/${nextQuestionValue.indexPath}`);
+    const newIndex = indexValue.indexPath + 1;
+    localStorage.setItem("nextQuestion", JSON.stringify({ indexPath: newIndex, indexRender: newIndex - 1 }));
+    navigate(`/pregunta/${newIndex}`);
+    setIndexValue({ indexPath: newIndex, indexRender: newIndex - 1 });
   }
-
-  function handlePrevChange() {
-    const prevQuestionValue = JSON.parse(localStorage.getItem("prevQuestion") || "{}");
-
-    // actualizar la propiedad indexPath en -1
-
-    // guardar el valor actualizado de prevQuestion en el localStorage
-    localStorage.setItem("prevQuestion", JSON.stringify(prevQuestionValue));
-
-    // navegar a la pregunta previa
-    navigate(`/pregunta/${parseInt(param)-1}`);
-  }
-
-function handleSurveyConfirmation() {
-  navigate(`/validar`);
-}
-  
-
-
-  
-
 
   return (
     <div className="container__survey">
       <Routes>
-        {dataSurvey[parseInt(param)] && (
-
+        {dataSurvey[indexValue.indexRender] && (
           <Route
-
-            path="/pregunta/:paramIndex"
+            path={`/pregunta/${indexValue.indexPath}`}
             element={
               <>
-                {console.log(dataSurvey.length)}
-                <div className="count__survey">{parseInt(param)}/{dataSurvey.length}</div>
-                {/* {console.log('pregunta actual', dataSurvey)}    */}
+                <div className="count__survey">{indexValue.indexPath}/{dataSurvey.length}</div>
                 <Statement
-                  key={dataSurvey[parseInt(param)-1].entrie}
-                  entrie={dataSurvey[parseInt(param)-1].entrie}
-                  description={dataSurvey[parseInt(param)-1].description}
-                  number={dataSurvey[parseInt(param)-1].number}
-                  newIndex={dataSurvey[parseInt(param)-1].newIndex}
-                  options={dataSurvey[parseInt(param)-1].options}
+                  key={dataSurvey[indexValue.indexRender].entrie}
+                  entrie={dataSurvey[indexValue.indexRender].entrie}
+                  description={dataSurvey[indexValue.indexRender].description}
+                  number={dataSurvey[indexValue.indexRender].number}
+                  newIndex={dataSurvey[indexValue.indexRender].newIndex}
+                  options={dataSurvey[indexValue.indexRender].options}
                   answered={false}
                 />
-                {parseInt(param) > 1 && (
-                  <button className="button-prev" onClick={handlePrevChange}>Anterior</button>
-                )}
-                {dataSurvey.length+1 == (parseInt(param)) ? (
-                  <button className="button-next" onClick={handleSurveyConfirmation}>Validar</button>
-                ) :
-                  <button
-                    className="button-next"
-                    onClick={handleStatementChange}
-                    // disabled={}
-                  // disabled={!dataSurvey[indexCurrent.indexRender].answered>
-                  >
+                {Number(param.id) > 1 && <button className="button-prev">Anterior</button>}
+                {dataSurvey.length === indexValue.indexPath ? (
+                  <button className="button-next" onClick={handleStatementChange}>
+                    Validar
+                  </button>
+                ) : (
+                  <button className="button-next" onClick={handleStatementChange}>
                     Siguiente
                   </button>
-                }
+                )}
               </>
             }
-            
-            
           />
         )}
       </Routes>
     </div>
   );
-
-
 };
+
 
 export default Survey;
