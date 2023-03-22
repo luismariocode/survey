@@ -85,7 +85,7 @@ const User: React.FC = () => {
             />
            
           </div>
-        {!isValidMail(entryValues["entry.1591421491"]) && (
+        {!isValidMail(entryValues["entry.1591421491"]) &&  isValid &&(
           <div className="error-correo" >Ingresa un correo electrónico válido</div>
         )}
           <div>
