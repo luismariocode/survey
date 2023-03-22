@@ -18,9 +18,10 @@
     font-weight: 700;
     color: #000;
     width: 400px;
-    padding-top: 50px;
+    /* padding-top: 50px; */
     padding-left: 35px;
     line-height: 60px;
+    margin-top: -20%;
   }
   .home__subtitle {
     font-size: 20px;
@@ -38,6 +39,7 @@
     width: 500px;
     height: 500px;
     align-self: center;
+    margin-bottom: 25%;
   }
   .container__datos .datos_title {
     display: flex;
