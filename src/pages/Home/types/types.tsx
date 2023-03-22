@@ -8,10 +8,14 @@ export interface IndexValues {
   indexRender: number;
 }
 
-
 export type LocationStateProps = {
   entriesProps: {
     entries: EntryValues;
     nextQuestion: IndexValues;
   };
 }
+
+export type ButtonProps = {
+  onClick: (event: React.MouseEvent<HTMLButtonElement>) => void;
+  disabled: boolean;
+};

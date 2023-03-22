@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { StatementProps } from "./types/types";
+import { StatementProps } from "../types/types";
 
 interface EntryValues {
   [key: string]: string;
@@ -42,6 +42,7 @@ const Statement: React.FC<StatementProps> = ({
     };
     localStorage.setItem("entries", JSON.stringify(newEntryValues));
     setEntryValues(newEntryValues);
+     
   }
 
   return (

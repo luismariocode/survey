@@ -27,3 +27,15 @@ export type LocationStateProps = {
     prevQuestion: IndexValues;
   };
 }
+
+
+export type ButtonNavProps = {
+  onClick: (event: React.MouseEvent<HTMLButtonElement>) => void;
+  disabled: boolean;
+};
+
+
+export type CountProps = {
+  count: number;
+  total: number;
+};

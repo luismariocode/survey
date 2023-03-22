@@ -1,6 +1,6 @@
 import React from "react";
 
-const Validar = () => {
+const Validate = () => {
   return (
     <>
       <section className="home">
@@ -17,4 +17,4 @@ const Validar = () => {
   );
 };
 
-export default Validar;
+export default Validate;
