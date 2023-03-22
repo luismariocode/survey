@@ -40,6 +40,7 @@
     height: 500px;
     align-self: center;
     margin-bottom: 25%;
+    margin-left: 10%;
   }
   .container__datos .datos_title {
     display: flex;
