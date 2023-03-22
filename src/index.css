@@ -8,6 +8,7 @@
   .home__main {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     background-color: #80CFA9;
     height: 100vh;
@@ -36,6 +37,7 @@
     justify-content: center;
     width: 500px;
     height: 500px;
+    align-self: center;
   }
   .container__datos .datos_title {
     display: flex;
