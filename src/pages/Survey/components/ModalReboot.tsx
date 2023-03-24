@@ -1,14 +1,22 @@
-const Modal = () => {
+import { ButtonRebootModalProps } from "../types/types";
+
+function Modal(props: ButtonRebootModalProps)  {
 
   return (
-    <div className="modal__reboot">
-      <span>icono</span>
-      <h2>¿Seguro qué quieres reiniciar el test?<br />
-      </h2>
-      <button>No</button>
-      <button>Sí, entiendo.</button>
+    <div className="modal--reboot modal--hidden">
+      <div className="modal__container">
+        <span className="modal__icon material-symbols-outlined">
+          help
+        </span>
+        <h2 className="modal__text">
+          ¿Seguro qué quieres reiniciar el test?
+        </h2>
+        <div className="modal__buttons">
+          <button onClick={props.onClickNo} className="modal__button modal__button--no">No</button>
+          <button onClick={props.onClickSi} className="modal__button modal__button--si">Sí, entiendo.</button>
+        </div>
+      </div>
     </div>)
-
 }
 
 

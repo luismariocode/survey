@@ -2,7 +2,7 @@ import { CountProps } from "../types/types";
 
 function Count(props: CountProps) {
   return (
-    <div>
+    <div className="survey__count">
       <span>{`${props.count}/${props.total}`}</span>
     </div>
   );

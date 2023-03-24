@@ -100,8 +100,10 @@
     }
 
     .button__start:disabled{
-      display: none;
+      opacity: 0;
+      transition: all .5s ease;
     }
+
 
     .button__start:hover{
       background-color: #000;
@@ -111,6 +113,7 @@
     }
 
     .button__start{
+      opacity: 1;
       background-color: #fff;
       color: #000;
       font-size: 1rem;
@@ -247,7 +250,8 @@
     }
 
     .button__start:disabled{
-      display: none;
+      opacity: 0;
+      transition: all .5s ease;
     }
 
     .button__start:hover{
@@ -258,6 +262,7 @@
     }
 
     .button__start{
+      opacity: 1;
       background-color: #fff;
       color: #000;
       font-size: 1rem;
@@ -355,7 +360,7 @@
         justify-content: space-around;
       }
 
-      .dato__nombre,
+    .dato__nombre,
     .dato__correo-electronico {
       width: 400px;
       min-width: 200px;
@@ -396,7 +401,8 @@
     }
 
     .button__start:disabled{
-      display: none;
+      opacity: 0;
+      transition: all .5s ease;
     }
 
     .button__start:hover{
@@ -407,6 +413,7 @@
     }
 
     .button__start{
+      opacity: 1;
       background-color: #fff;
       color: #000;
       font-size: 1rem;

@@ -34,8 +34,18 @@ export type ButtonNavProps = {
   disabled: boolean;
 };
 
+export type ButtonRebootProps = {
+  onClick: (event: React.MouseEvent<HTMLButtonElement>) => void;
+}
+
 
 export type CountProps = {
   count: number;
   total: number;
+};
+
+
+export type ButtonRebootModalProps = {
+  onClickSi: (event: React.MouseEvent<HTMLButtonElement>) => void;
+  onClickNo: (event: React.MouseEvent<HTMLButtonElement>) => void;
 };

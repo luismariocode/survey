@@ -1,7 +1,11 @@
-import { ButtonNavProps } from "../types/types";
+import { ButtonRebootProps } from "../types/types";
 
-function ButtonReboot(props: ButtonNavProps) {
-  return (<button onClick={props.onClick} disabled={props.disabled} className="button__next" > Comenzar !</button>);
+function ButtonReboot(props: ButtonRebootProps) {
+  return (<button onClick={props.onClick}  className="button__next" > 
+   <span className="material-symbols-outlined">
+restart_alt
+</span>
+  </button>);
 }
 
 export default ButtonReboot;

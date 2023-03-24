@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { Routes, Route, useNavigate, Outlet, useParams, useLocation } from "react-router-dom";
-// import shuffleStatements from "./scripts/scripts";
 import Statement from "./components/Statement";
-import { StatementProps, EntryValues, IndexValues } from "./types/types";
-import  dataSurvey  from "../../server/server";
-// import data from "../../server/statement.json";
-// const dataSurvey = shuffleStatements(data);
+import { IndexValues } from "./types/types";
+import Count from "./components/Count";
+import ButtonReboot from "./components/ButtonReboot";
+import ModalReboot from "./components/ModalReboot";
+
+
 
 
 
@@ -46,18 +47,37 @@ const Survey: React.FC = () => {
     navigate("/validar", { state: { entriesProps } });
   }
 
-  
+  function handleModalReboot() {
+    const modal = document.querySelector(".modal--reboot");
+    modal?.classList.remove("modal--hidden");
+  }
+
+  function handleReboot() {
+    localStorage.removeItem("entries");
+    localStorage.removeItem("nextQuestion");
+    localStorage.removeItem("data");
+    navigate("/");
+  }
+
+  function handleNo() {
+    const modal = document.querySelector(".modal--reboot");
+    modal?.classList.add("modal--hidden");
+  }
 
   return (
-    <div className="container__survey">
+    <div className="survey">
       <Routes>
         <Route
           path="/"
           element={
-            <>
-              <div className="count__survey">{indexValue.indexPath}/{dataSurvey.length}</div>
+            <div className="survey__container">
+              <ModalReboot onClickSi={handleReboot} onClickNo={handleNo} />
+              <div className="survey__header">
+                <ButtonReboot onClick={handleModalReboot} />
+                <Count count={indexValue.indexPath} total={dataSurvey.length} />
+              </div>
               <Outlet />
-            
+
               <Statement
                 key={dataSurvey[indexValue.indexRender].entrie}
                 entrie={dataSurvey[indexValue.indexRender].entrie}
@@ -77,12 +97,12 @@ const Survey: React.FC = () => {
                   Validar
                 </button>
               ) : (
-                  <button className="button-next" onClick={handleNextQuestion} disabled={!dataSurvey[indexValue.indexRender].entrie}>
+                <button className="button-next" onClick={handleNextQuestion} disabled={!dataSurvey[indexValue.indexRender].entrie}>
 
                   Siguiente
                 </button>
               )}
-            </>
+            </div>
           }
         />
       </Routes>

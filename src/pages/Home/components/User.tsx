@@ -21,12 +21,24 @@ const User: React.FC = () => {
   const [entryValues, setEntryValues] = useState<EntryValues>(entries);
   const [indexValues, setIndexValues] = useState<IndexValues>(nextQuestion);
 
+  
+  function capitalizeFirstLetter(string: string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+  }
+
+  function capitalizeWords(string: string) {
+    return string
+      .split(' ')
+      .map(word => capitalizeFirstLetter(word))
+      .join(' ');
+  }
 
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setEntryValues({
       ...entryValues,
       [event.target.name]: event.target.value,
     });
+
     setIndexValues({
       indexPath:1,
       indexRender:0,
@@ -61,7 +73,7 @@ const User: React.FC = () => {
             <input
               type="text"
               name="entry.23723034"
-              value={entryValues["entry.23723034"]}
+              value={capitalizeWords(entryValues["entry.23723034"])}
               onChange={handleInputChange}
               onKeyDown={(event) =>
                 handleKeyPress(event, handleSaveEntries, isValid)
@@ -83,17 +95,10 @@ const User: React.FC = () => {
               placeholder="Correo Electrónico"
               required
             />
-           
           </div>
-        {!isValidMail(entryValues["entry.1591421491"]) &&  isValid &&(
-          <div className="error-correo" >Ingresa un correo electrónico válido</div>
-        )}
-          <div>
-
+              
             <ButtonStart onClick={handleSaveEntries} disabled={!isValid} />
-
-            
-          </div>
+        
         
       </div>
     </>
