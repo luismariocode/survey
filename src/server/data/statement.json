@@ -112,7 +112,7 @@
   {
     "entrie": "entry.1590551160",
     "number": 10,
-    "description": "Me gustan las películas de terror y las atracciones emocionantes. Soy un poco temerari@.",
+    "description": "Me gustan las películas de terror y las atracciones emocionantes.",
     "options": [{
       "label": "Si"
     }, {
@@ -844,7 +844,7 @@
   {
     "entrie": "entry.310422235",
     "number": 71,
-    "description": "A menudo uso las matemáticas y la lógica para resolver problemas cotidianos, por ejemplo, ¿es más barato comprar un determinado producto al por mayor?",
+    "description": "A menudo uso las matemáticas y la lógica para resolver problemas cotidianos.",
     "options": [{
       "label": "Si"
     }, {

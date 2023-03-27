@@ -1,7 +1,11 @@
-import { ButtonNavProps } from "../types/types";
+import { ButtonRebootProps } from "../types/types";
 
-function ButtonPrev(props: ButtonNavProps) {
-  return (<button onClick={props.onClick} disabled={props.disabled} className="button__prev" > Comenzar !</button>);
+function ButtonPrev(props: ButtonRebootProps) {
+  return (
+  <button onClick={props.onClick} className="button__prev" >
+    <span className="material-symbols-outlined">skip_previous</span>
+  </button>
+  );
 }
 
 export default ButtonPrev;

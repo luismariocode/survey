@@ -47,8 +47,8 @@ const Statement: React.FC<StatementProps> = ({
 
   return (
     <>
-      <div className="container__statement">
-        <div className="statement-description">
+      <div className="container--statement">
+        <div className="statement__description">
           <h3>{description}</h3>
           <>
             {console.log(entrie)}
@@ -57,7 +57,7 @@ const Statement: React.FC<StatementProps> = ({
             {/* {console.log(handleOptionChange)} */}
           </>
         </div>
-        <div className="statement-options">
+        <div className="statement__options">
           {options.map((option) => {
             return (
               <div key={option.label} className="option">

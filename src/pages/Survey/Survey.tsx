@@ -5,6 +5,7 @@ import { IndexValues } from "./types/types";
 import Count from "./components/Count";
 import ButtonReboot from "./components/ButtonReboot";
 import ModalReboot from "./components/ModalReboot";
+import ButtonPrev from "./components/ButtonPrev";
 
 
 
@@ -77,7 +78,12 @@ const Survey: React.FC = () => {
                 <Count count={indexValue.indexPath} total={dataSurvey.length} />
               </div>
               <Outlet />
-
+              <div className="container--buttonPrev">
+                {indexValue.indexPath > 1 &&
+  	              <ButtonPrev onClick={handlePrevQuestion}></ButtonPrev>
+                }
+              </div> 
+            
               <Statement
                 key={dataSurvey[indexValue.indexRender].entrie}
                 entrie={dataSurvey[indexValue.indexRender].entrie}
@@ -87,21 +93,20 @@ const Survey: React.FC = () => {
                 options={dataSurvey[indexValue.indexRender].options}
                 answered={false}
               />
-
-
-
-
-              {indexValue.indexPath > 1 && <button className="button-prev" onClick={handlePrevQuestion}>Anterior</button>}
+              
+              <div className="container--buttons-bottom">
               {dataSurvey.length === indexValue.indexPath ? (
-                <button className="button-next" onClick={handleValidate}>
+                <button className="button--next button--check" onClick={handleValidate}>
                   Validar
                 </button>
               ) : (
-                <button className="button-next" onClick={handleNextQuestion} disabled={!dataSurvey[indexValue.indexRender].entrie}>
-
-                  Siguiente
+                <button className="button--next" onClick={handleNextQuestion} disabled={!dataSurvey[indexValue.indexRender].entrie}>
+                  <span>Siguiente</span>
                 </button>
               )}
+              </div>
+
+              
             </div>
           }
         />
