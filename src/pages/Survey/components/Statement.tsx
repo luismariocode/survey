@@ -42,7 +42,11 @@ const Statement: React.FC<StatementProps> = ({
     };
     localStorage.setItem("entries", JSON.stringify(newEntryValues));
     setEntryValues(newEntryValues);
-     
+
+
+
+
+  
   }
 
   return (
@@ -50,12 +54,6 @@ const Statement: React.FC<StatementProps> = ({
       <div className="container--statement">
         <div className="statement__description">
           <h3>{description}</h3>
-          <>
-            {console.log(entrie)}
-            {console.log(number)}
-            {console.log(newIndex)}
-            {/* {console.log(handleOptionChange)} */}
-          </>
         </div>
         <div className="statement__options">
           {options.map((option) => {

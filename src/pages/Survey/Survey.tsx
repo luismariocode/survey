@@ -6,6 +6,7 @@ import Count from "./components/Count";
 import ButtonReboot from "./components/ButtonReboot";
 import ModalReboot from "./components/ModalReboot";
 import ButtonPrev from "./components/ButtonPrev";
+import ButtonNext from "./components/ButtonNext";
 
 
 
@@ -100,9 +101,8 @@ const Survey: React.FC = () => {
                   Validar
                 </button>
               ) : (
-                <button className="button--next" onClick={handleNextQuestion} disabled={!dataSurvey[indexValue.indexRender].entrie}>
-                  <span>Siguiente</span>
-                </button>
+                <ButtonNext onClick={handleNextQuestion} disabled={!dataSurvey[indexValue.indexRender].entrie} />
+
               )}
               </div>
 
