@@ -2,7 +2,12 @@ import { ButtonProps } from "../types/types";
 
 
 function ButtonStart (props:ButtonProps )  {
-  return (<button onClick={props.onClick} disabled={props.disabled} className="button__start" >Comenzar</button>);
+  return (
+  <button onClick={props.onClick} disabled={props.disabled} className="button button__start" >
+    <span>COMENZAR</span>
+    <span className="material-symbols-sharp">arrow_forward</span>
+  </button>
+  );
 }
 
 export default ButtonStart;

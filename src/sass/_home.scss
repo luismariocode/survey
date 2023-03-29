@@ -1,0 +1,199 @@
+@import "_variables.scss";
+@import "_mixins.scss";
+
+#home {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 100vh;
+  width: 100%;
+
+  @include md {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+
+    .home__info {
+      grid-column: 1/2;
+      grid-row: 1/2;
+      background-color: $color__primary;
+      justify-content: center;
+      align-items: center;
+      padding: 0;
+
+      & .home__title {
+        padding-bottom: 0;
+        margin-bottom: -$spacing__secondary;
+      }
+
+      & .home__subtitle {
+        display: flex;
+        flex-wrap: wrap;
+        align-content: space-around;
+        justify-content: center;
+        font-weight: 400;
+      }
+    }
+
+    .home__data {
+      grid-column: 1/2;
+      grid-row: 2/3;
+      background-color: $color__primary;
+
+      .container__datos {
+        justify-content: flex-start;
+
+        .datos__title {
+          color: $color__light;
+          font-weight: 400;
+        }
+      }
+    }
+
+    .button {
+      background-color: $color__light;
+    }
+  }
+
+  @include sm {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+
+    .home__info {
+      grid-column: 1/2;
+      grid-row: 1/2;
+      background-color: $color__primary;
+      justify-content: center;
+      align-items: center;
+      padding: 0;
+
+      & .home__title {
+        padding-bottom: 0;
+        margin-bottom: -$spacing__secondary;
+      }
+
+      & .home__subtitle {
+        display: flex;
+        flex-wrap: wrap;
+        align-content: space-around;
+        justify-content: center;
+        font-weight: 400;
+      }
+    }
+
+    .home__data {
+      grid-column: 1/2;
+      grid-row: 2/3;
+      background-color: $color__primary;
+
+      .container__datos {
+        justify-content: flex-start;
+
+        .datos__title {
+          color: $color__light;
+          font-size: 20px;
+          font-weight: 400;
+        }
+      }
+    }
+
+    .button {
+      background-color: $color__light;
+    }
+  }
+}
+
+.home__info {
+  display: flex;
+  grid-column: 1/2;
+  flex-direction: column;
+  justify-content: right;
+  align-items: flex-start;
+  width: 100%;
+  height: 100%;
+  background-color: $color__primary;
+
+  padding-left: 25%;
+
+  & .home__title {
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: $spacing__secondary;
+    font-weight: $font-weight__primary;
+    color: $color__light;
+    width: 75%;
+    height: 50%;
+  }
+
+  & .home__subtitle {
+    font-size: $font-size__secondary;
+    color: $color__light;
+    width: 75%;
+    height: 50%;
+  }
+}
+
+.home__data {
+  display: flex;
+  grid-column: 2/3;
+  flex-direction: column;
+  place-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: $color__light;
+
+  .container__datos {
+    display: flex;
+    flex-direction: column;
+    place-content: center;
+    padding: $spacing__primary;
+    width: 100%;
+    height: 100%;
+
+    .datos__title {
+      display: inline-flex;
+      align-items: center;
+      font-size: $font-size__secondary;
+      font-weight: $font-weight__primary;
+      color: $color__dark;
+      align-self: flex-start;
+
+      width: 100%;
+      justify-content: center;
+
+      & span {
+        font-size: $font-size__primary;
+        margin-right: $spacing__primary;
+      }
+    }
+
+    .dato__nombre,
+    .dato__correo-electronico {
+      display: inline-flex;
+      align-items: center;
+      width: 100%;
+      justify-content: center;
+      margin-top: $spacing__secondary;
+
+      & input {
+        display: inline-flex;
+        align-items: center;
+        width: 75%;
+        justify-content: center;
+        padding: $spacing__primary;
+        border: $border__primary;
+        border-radius: $border-radius__primary;
+        font-size: $font-size__secondary;
+        font-weight: $font-weight__primary;
+        color: $color__dark;
+        background-color: $color__light;
+        margin-top: $spacing__primary;
+        padding-left: $spacing__primary;
+      }
+
+      .material-symbols-sharp {
+        position: relative;
+        top: 3px;
+        left: 10px;
+      }
+    }
+  }
+}

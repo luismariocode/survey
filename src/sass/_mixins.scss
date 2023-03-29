@@ -1,0 +1,24 @@
+/* ==========================================================================
+   Media queries
+   ========================================================================== */
+
+// Styles for mobile
+@mixin sm {
+    @media only screen and (max-width: 519px) {
+        @content;
+    }
+}	
+
+// Styles for tablet
+@mixin md {
+    @media only screen and (min-width: 520px) and (max-width: 1023px) {
+        @content;
+    }
+}
+
+// Styles for desktop
+@mixin lg {
+    @media only screen and (min-width: 1024px) {
+        @content;
+    }
+}

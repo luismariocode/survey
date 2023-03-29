@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;500&display=swap');
+
+/* ==========================================================================
+   Variables
+   ========================================================================== */
+
+// Colors
+$color__primary: #6378EB;
+$color__secondary: #73CDD8;
+$color__light: #f2f2f2;
+$color__dark: #1c1c1c;
+$color__primary-light: lighten($color__primary, 20%);
+$color__primary-dark: darken($color__primary, 20%);
+$color__secondary-light: lighten($color__primary, 20%);
+$color__secondary-dark: darken($color__primary, 20%);
+
+
+// Fonts
+$font__primary: 'Montserrat', sans-serif;
+$font__secondary: 'Lato', sans-serif;
+
+// Font sizes
+$font-size__primary: 2.5rem;
+$font-size__secondary: 1.5rem;
+
+
+// Font weights
+$font-weight__primary: 400;
+$font-weight__secondary: 500;
+
+// Spacing
+$spacing__primary: 1rem;
+$spacing__secondary: 2rem;
+$spacing__tertiary: 3rem;
+
+// Border radius
+$border-radius__primary: 5px;
+$border-radius__buttons: 20px;
+
+// Border 
+$border__primary: 2px solid $color__primary;
+
+// Box shadow
+$box-shadow__primary: 2px 4px 4px rgba(0, 0, 0, 0.25);
+
+// transition
+$transition__primary: 0.3s ease-in-out;
+
+
+
+
+/* ==========================================================================
+   Global
+   ========================================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    background-color: $color__light;
+    font-family: $font__primary;
+    color: $color__dark;
+    font-weight: $font-weight__primary;
+    font-size: $font-size__primary;
+    line-height: auto;
+    overflow: hidden;
+}
+
+/* ==========================================================================
+   Media queries
+   ========================================================================== */
+
+// Styles for mobile
+@mixin sm {
+    @media only screen and (max-width: 519px) {
+        @content;
+    }
+}	
+
+// Styles for tablet
+@mixin md {
+    @media only screen and (min-width: 520px) and (max-width: 1023px) {
+        @content;
+    }
+}
+
+// Styles for desktop
+@mixin lg {
+    @media only screen and (min-width: 1024px) {
+        @content;
+    }
+}
+
+
+/* ==========================================================================
+   Components
+   ========================================================================== */
+
+// Button
+.button{
+    opacity: 1;
+    width: 350px;
+    border-radius: $border-radius__buttons;
+    border: $border__primary;
+    background-color: $color__primary-light;
+    color: $color__primary;
+    visibility: visible;
+    font-size: $font-size__secondary;
+    font-family: $font__primary;
+    font-weight: $font-weight__secondary;
+    padding: $spacing__primary;
+    margin-top: $spacing__secondary;
+    cursor: pointer;
+    box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);;
+    transition: all $transition__primary;
+
+    &:hover{
+      background-color: $color__primary;
+      color: $color__light;
+      box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.25);
+    }
+
+    
+  }
+
+.button:disabled{
+    visibility: hidden;
+    opacity: 0;
+    transition: all $transition__primary;
+  }
+
+// Modal
+
+
+
+// ==========================================================================
+//   TEST DEVELOPMENT
+// ==========================================================================
+
+
+@mixin border-test
+{
+    border: 1px solid red;
+}
+
+@mixin border-test2
+{
+    border: 1px solid blue;
+}
+
+@mixin border-test3
+{
+    border: 1px solid green;
+}
+
+@mixin background-test
+{
+    background-color: tan;
+}
+
+@mixin background-test2
+{
+    background-color: tomato;
+}
+
+
+
+
+
+
+

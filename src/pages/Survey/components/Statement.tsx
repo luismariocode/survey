@@ -43,7 +43,7 @@ const Statement: React.FC<StatementProps> = ({
     localStorage.setItem("entries", JSON.stringify(newEntryValues));
     setEntryValues(newEntryValues);
 
-
+ 
 
 
   

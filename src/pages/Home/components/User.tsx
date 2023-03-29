@@ -61,7 +61,7 @@ const User: React.FC = () => {
     <>
       <div className="container__datos" >
 
-        <div className="datos_title">
+        <div className="datos__title">
           <span className="material-symbols-outlined">
             account_circle
           </span>
@@ -96,9 +96,10 @@ const User: React.FC = () => {
               required
             />
           </div>
-              
+
+          <div className="dato__correo-electronico">  
             <ButtonStart onClick={handleSaveEntries} disabled={!isValid} />
-        
+          </div>
         
       </div>
     </>
