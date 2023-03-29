@@ -1,6 +1,6 @@
 @import '_variables.scss';
 @import '_home.scss';
-@import '../pages/Survey/sass/_survey.scss';
+@import '_survey.scss';
 
 body{
     padding:0;
@@ -14,6 +14,8 @@ body{
   }
   
   .main{
+    display: flex;
+    justify-content: center;
     height: 100vh;
     width: 100%;
     background-color: $color__light;

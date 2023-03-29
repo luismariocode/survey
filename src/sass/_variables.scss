@@ -12,8 +12,8 @@ $color__light: #f2f2f2;
 $color__dark: #1c1c1c;
 $color__primary-light: lighten($color__primary, 20%);
 $color__primary-dark: darken($color__primary, 20%);
-$color__secondary-light: lighten($color__primary, 20%);
-$color__secondary-dark: darken($color__primary, 20%);
+$color__secondary-light: lighten($color__secondary, 20%);
+$color__secondary-dark: darken($color__secondary, 20%);
 
 
 // Fonts
@@ -71,30 +71,7 @@ body {
     overflow: hidden;
 }
 
-/* ==========================================================================
-   Media queries
-   ========================================================================== */
 
-// Styles for mobile
-@mixin sm {
-    @media only screen and (max-width: 519px) {
-        @content;
-    }
-}	
-
-// Styles for tablet
-@mixin md {
-    @media only screen and (min-width: 520px) and (max-width: 1023px) {
-        @content;
-    }
-}
-
-// Styles for desktop
-@mixin lg {
-    @media only screen and (min-width: 1024px) {
-        @content;
-    }
-}
 
 
 /* ==========================================================================
@@ -132,7 +109,18 @@ body {
     visibility: hidden;
     opacity: 0;
     transition: all $transition__primary;
-  }
+}
+
+.button__small{
+    margin-right: 5px;
+    height: 40px;
+    width: 40px;
+    border-radius: 10px;
+    color: $color__primary-dark;
+    background-color: $color__primary-light;
+    border:2px solid $color__primary-dark;
+    
+}
 
 // Modal
 
