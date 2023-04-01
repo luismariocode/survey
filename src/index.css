@@ -22,7 +22,7 @@ body {
   font-family: "Montserrat", sans-serif;
   color: #1c1c1c;
   font-weight: 400;
-  font-size: 2.5rem;
+  font-size: 3rem;
   line-height: auto;
   overflow: hidden;
 }
@@ -87,7 +87,7 @@ body {
   font-family: "Montserrat", sans-serif;
   color: #1c1c1c;
   font-weight: 400;
-  font-size: 2.5rem;
+  font-size: 3rem;
   line-height: auto;
   overflow: hidden;
 }
@@ -162,6 +162,7 @@ body {
   box-sizing: content-box;
 }
 #home .home__title {
+  padding-top: 1rem;
   width: 100%;
   border: 2px solid blue;
 }
@@ -189,7 +190,7 @@ body {
   font-family: "Montserrat", sans-serif;
   color: #1c1c1c;
   font-weight: 400;
-  font-size: 2.5rem;
+  font-size: 3rem;
   line-height: auto;
   overflow: hidden;
 }
@@ -455,8 +456,9 @@ body {
 }
 
 h1 {
+  font-family: "Montserrat", sans-serif;
   font-size: 3rem;
-  font-weight: 700;
+  font-weight: 400;
   color: #f2f2f2;
   text-align: left;
   text-rendering: optimizeLegibility;
