@@ -1,3 +1,24 @@
-$mobile: only screen and (max-width: 767px);
-$tablet: only screen and (min-width: 768px) and (max-width: 991px);
-$desktop: only screen and (min-width: 992px) and (max-width: 1199px);
+/* ==========================================================================
+   Media queries
+   ========================================================================== */
+
+// Styles for mobile
+@mixin sm-mobile {
+    @media only screen and (max-width: 519px) {
+        @content;
+    }
+}	
+
+// Styles for tablet
+@mixin md-tablet {
+    @media only screen and (min-width: 520px) and (max-width: 1023px) {
+        @content;
+    }
+}
+
+// Styles for desktop
+@mixin lg-desktop {
+    @media only screen and (min-width: 1024px) {
+        @content;
+    }
+}
