@@ -1,9 +1,9 @@
-/* Error: unmatched "}".
- *     ,
- * 112 | }
- *     | ^
- *     '
- *   src\sass\pages\_home.scss 112:1  @import
+/* Error: (max-width: 767px) isn't a valid CSS value.
+ *    ,
+ * 12 |   @media #{$mobile} {
+ *    |            ^^^^^^^
+ *    '
+ *   src\sass\pages\_home.scss 12:12  @import
  *   src\sass\main.scss 2:9           root stylesheet */
 
 body::before {
@@ -14,5 +14,5 @@ body::before {
   padding: 1em;
   margin-bottom: 1em;
   border-bottom: 2px solid black;
-  content: 'Error: unmatched "}".\a     \2577 \a 112 \2502  }\d\a     \2502  ^\a     \2575 \a   src\\sass\\pages\\_home.scss 112:1  @import\a   src\\sass\\main.scss 2:9           root stylesheet';
+  content: "Error: (max-width: 767px) isn't a valid CSS value.\a    \2577 \a 12 \2502    @media #{$mobile} {\d\a    \2502             ^^^^^^^\a    \2575 \a   src\\sass\\pages\\_home.scss 12:12  @import\a   src\\sass\\main.scss 2:9           root stylesheet";
 }

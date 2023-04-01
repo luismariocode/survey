@@ -15,7 +15,7 @@
     }
   }	
     
-  }
+  }  
 
   @include md-tablet {
     grid-template-columns: 1fr;
@@ -109,7 +109,7 @@
       background-color: $color__light;
     }
   }
-}
+
 
 .home__info {
   display: flex;
