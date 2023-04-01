@@ -30,6 +30,15 @@ body{
     text-rendering: optimizeLegibility;
   }
 
+  h2{
+    font-family: calc($font-size__primary * .8) ;
+    font-size:$font-size__secondary;
+    font-weight: $font-weight__primary;
+    color: $color__light;
+    text-align: left;
+    text-rendering: optimizeLegibility;
+  }
+
   p{
     font-family: $font__secondary;
     font-size:$font-size__secondary;
@@ -37,4 +46,14 @@ body{
     color: $color__light;
     text-align: left;
     text-rendering: optimizeLegibility;
+  }
+
+  input{
+    font-family: $font__secondary;
+    font-size:$font-size__secondary;
+    font-weight: $font-weight__primary;
+    color: $color__light;
+    text-align: left;
+    text-rendering: optimizeLegibility;
+    width: 100%;
   }

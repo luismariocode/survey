@@ -171,6 +171,18 @@ body {
   width: 100%;
   border: 2px solid blue;
 }
+#home .home__data {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 2rem;
+  height: auto;
+  width: 100%;
+  background-color: green;
+  border: 1px solid tomato;
+  box-sizing: content-box;
+}
 
 /* ==========================================================================
    Variables
@@ -464,6 +476,15 @@ h1 {
   text-rendering: optimizeLegibility;
 }
 
+h2 {
+  font-family: 2.4rem;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #f2f2f2;
+  text-align: left;
+  text-rendering: optimizeLegibility;
+}
+
 p {
   font-family: "Lato", sans-serif;
   font-size: 1.5rem;
@@ -471,6 +492,16 @@ p {
   color: #f2f2f2;
   text-align: left;
   text-rendering: optimizeLegibility;
+}
+
+input {
+  font-family: "Lato", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #f2f2f2;
+  text-align: left;
+  text-rendering: optimizeLegibility;
+  width: 100%;
 }
 
 /*# sourceMappingURL=index.css.map */

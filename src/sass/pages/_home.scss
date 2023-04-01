@@ -38,6 +38,19 @@
     border: 2px solid blue;
   }
 
+  .home__data {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 2rem;
+    height: auto;
+    width: 100%;
+    background-color: green;
+    border: 1px solid tomato;
+    box-sizing: content-box;
+  }
+
   
 
 
