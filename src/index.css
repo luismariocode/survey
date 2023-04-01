@@ -69,8 +69,9 @@ body {
   height: 100vh;
   width: 100%;
   overflow: hidden;
-  margin-top: 1rem;
+  margin: 0;
   padding: 0 20px;
+  background-color: #6378EB;
 }
 #home .home__info {
   display: flex;
@@ -79,30 +80,23 @@ body {
   align-items: center;
   height: auto;
   width: 100%;
-  background-color: hotpink;
-  border: 1px solid tomato;
   box-sizing: content-box;
 }
 #home .home__title {
   padding-top: 1rem;
   width: 100%;
-  border: 2px solid blue;
 }
 #home .home__subtitle {
   margin-top: 1rem;
   width: 100%;
-  border: 2px solid blue;
 }
 #home .home__data {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  margin-top: 0.5rem;
   height: auto;
   width: 100%;
-  background-color: green;
-  border: 1px solid tomato;
   box-sizing: content-box;
 }
 #home .container__datos {
@@ -112,24 +106,26 @@ body {
   align-items: flex-start;
   width: 100%;
   height: auto;
-  background-color: cadetblue;
-  border: 1px solid tomato;
   box-sizing: content-box;
 }
 #home .container__datos .datos__title {
   display: flex;
   justify-content: flex-start;
-  color: #f2f2f2;
+  align-items: center;
   margin-top: 1rem;
   width: 100%;
-  border: 2px solid blue;
+  border-radius: 5px;
+  background-color: #73CDD8;
+  padding: 0.2rem;
 }
 #home .container__datos .datos__title span {
-  margin-top: 0.2rem;
-  margin-right: 0.7rem;
+  margin-top: 0rem;
+  margin-left: 0.3rem;
+  margin-right: 0.3rem;
+  font-size: 1.2rem;
+  color: #f2f2f2;
 }
 #home .container__datos .dato__nombre, #home .container__datos .dato__correo-electronico {
-  border: 1px solid red;
   height: auto;
   width: 100%;
 }
@@ -140,8 +136,6 @@ body {
   width: 100%;
   height: 100vh;
   margin-top: 1rem;
-  border: 1px solid red;
-  font-size: 3rem;
 }
 
 /* ==========================================================================
@@ -386,6 +380,8 @@ body {
   height: 100%;
   width: 100%;
   background-color: #f2f2f2;
+  padding: 0;
+  margin: 0;
 }
 
 h1 {
@@ -398,9 +394,9 @@ h1 {
 }
 
 h2 {
-  font-family: 2.4rem;
-  font-size: 1.5rem;
-  font-weight: 400;
+  font-size: 1.2rem;
+  font-weight: 500;
+  font-family: "Montserrat", sans-serif;
   color: #f2f2f2;
   text-align: left;
   text-rendering: optimizeLegibility;
@@ -419,24 +415,40 @@ input {
   font-family: "Lato", sans-serif;
   font-size: 1.2rem;
   font-weight: 400;
+  border: 1px solid #32a5b3;
+  border-radius: 5px;
   color: #f2f2f2;
   text-align: left;
   text-rendering: optimizeLegibility;
   width: 100%;
   padding: 5px;
+  padding-left: 10PX;
+}
+input::placeholder {
+  color: #bdc6f7;
+  font-size: 0.8em;
+}
+input:focus {
+  outline: none;
+  color: #1a36ce;
 }
 
-button:disabled {
-  font-size: 1.5rem;
+button {
+  font-size: 1.2rem;
   background-color: #32a5b3;
   color: #f2f2f2;
   border: 1px solid #32a5b3;
-  cursor: not-allowed;
+  border-radius: 10px;
+  padding: 5px 15px;
+  font-family: "Montserrat", sans-serif;
+  border: 2px solid #c3e9ee;
+  cursor: pointer;
 }
-button:disabled span:last-child {
+button span:last-child {
   position: relative;
-  left: 0;
-  top: 2px;
+  font-size: 20px;
+  left: 3px;
+  top: 3px;
 }
 
 /*# sourceMappingURL=index.css.map */

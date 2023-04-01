@@ -19,6 +19,8 @@ body{
     height: 100%;
     width: 100%;
     background-color: $color__light;
+    padding: 0;
+    margin: 0;
   }
 
   h1{
@@ -31,9 +33,9 @@ body{
   }
 
   h2{
-    font-family: calc($font-size__primary * .8) ;
-    font-size:$font-size__secondary;
-    font-weight: $font-weight__primary;
+    font-size: calc($font-size__primary * .4) ;
+    font-weight: $font-weight__secondary;
+    font-family: $font__primary;
     color: $color__light;
     text-align: left;
     text-rendering: optimizeLegibility;
@@ -52,23 +54,41 @@ body{
     font-family: $font__secondary;
     font-size:$font-size__secondary*.8;
     font-weight: $font-weight__primary;
+    border: 1px solid $color__secondary-dark;
+    border-radius: 5px;
     color: $color__light;
     text-align: left;
     text-rendering: optimizeLegibility;
     width: 100%;
     padding: 5px;
+    padding-left: 10PX;
+
+    &::placeholder{
+      color: $color__primary-light;
+      font-size: .8em;
+    }
+
+    &:focus{
+      outline: none;
+      color: $color__primary-dark;
+    }
   }
 
-  button:disabled{
-    font-size: $font-size__secondary;
+  button{
+    font-size: $font-size__secondary * .8;
     background-color: $color__secondary-dark;
     color: $color__light;
     border: 1px solid $color__secondary-dark;
-    cursor: not-allowed;
+    border-radius: 10px;
+    padding: 5px 15px;
+    font-family: $font__primary;
+    border: 2px solid $color__secondary-light;
+    cursor: pointer;
 
     span:last-child{
       position: relative;
-      left: 0;
-      top: 2px;
+      font-size: 20px;
+      left: 3px;
+      top: 3px;
     }
   }

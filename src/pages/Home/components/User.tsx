@@ -65,7 +65,7 @@ const User: React.FC = () => {
           <span className="material-symbols-outlined">
             account_circle
           </span>
-          <h2>INGRESA TUS DATOS</h2>
+          <h2>Tus Datos</h2>
         </div>
         
           
