@@ -381,9 +381,9 @@ body {
 }
 
 .main {
-  display: flex;
+  display: block;
   justify-content: center;
-  height: 100vh;
+  height: 100%;
   width: 100%;
   background-color: #f2f2f2;
 }
