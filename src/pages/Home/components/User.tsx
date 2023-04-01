@@ -62,9 +62,7 @@ const User: React.FC = () => {
       <div className="container__datos" >
 
         <div className="datos__title">
-          <span className="material-symbols-outlined">
-            account_circle
-          </span>
+        <span className="material-symbols-outlined">navigate_next</span>
           <h2>Tus Datos</h2>
         </div>
         

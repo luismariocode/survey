@@ -106,6 +106,7 @@ body {
   align-items: flex-start;
   width: 100%;
   height: auto;
+  padding-top: 35px;
   box-sizing: content-box;
 }
 #home .container__datos .datos__title {
@@ -116,7 +117,7 @@ body {
   width: 100%;
   border-radius: 5px;
   background-color: #73CDD8;
-  padding: 0.2rem;
+  padding: 0.4rem;
 }
 #home .container__datos .datos__title span {
   margin-top: 0rem;
@@ -423,6 +424,7 @@ input {
   width: 100%;
   padding: 5px;
   padding-left: 10PX;
+  line-height: 0.3rem;
 }
 input::placeholder {
   color: #bdc6f7;
@@ -434,6 +436,8 @@ input:focus {
 }
 
 button {
+  visibility: visible;
+  opacity: 1;
   font-size: 1.2rem;
   background-color: #32a5b3;
   color: #f2f2f2;
@@ -443,6 +447,11 @@ button {
   font-family: "Montserrat", sans-serif;
   border: 2px solid #c3e9ee;
   cursor: pointer;
+}
+button:disabled {
+  visibility: hidden;
+  opacity: 0;
+  cursor: not-allowed;
 }
 button span:last-child {
   position: relative;

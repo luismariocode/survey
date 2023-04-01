@@ -60,6 +60,7 @@
     align-items: flex-start;
     width: 100%;
     height: auto;
+    padding-top: 35px;
     // background-color: cadetblue;
     // border: 1px solid tomato;
     box-sizing: content-box;
@@ -73,7 +74,7 @@
       width: 100%;
       border-radius: 5px;
       background-color: $color__secondary;
-      padding: 0.2rem;
+      padding: 0.4rem;
       // border: 2px solid blue;
       span{
         margin-top: 0rem;
