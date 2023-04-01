@@ -20,3 +20,20 @@ body{
     width: 100%;
     background-color: $color__light;
   }
+
+  h1{
+    font-size: 3rem;
+    font-weight: 700;
+    color: $color__light;
+    text-align: left;
+    text-rendering: optimizeLegibility;
+  }
+
+  p{
+    font-family: $font__secondary;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: $color__light;
+    text-align: left;
+    text-rendering: optimizeLegibility;
+  }

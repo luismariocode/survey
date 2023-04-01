@@ -141,12 +141,34 @@ body {
    Media queries
    ========================================================================== */
 #home {
-  display: grid;
-  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
   height: 100vh;
   width: 100%;
   overflow: hidden;
-  background-color: tomato;
+  margin-top: 35px;
+  padding: 0 20px;
+}
+#home .home__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: auto;
+  width: 100%;
+  background-color: hotpink;
+  border: 1px solid tomato;
+  box-sizing: content-box;
+}
+#home .home__title {
+  width: 100%;
+  border: 2px solid blue;
+}
+#home .home__subtitle {
+  margin-top: 2rem;
+  width: 100%;
+  border: 2px solid blue;
 }
 
 /* ==========================================================================
@@ -430,6 +452,23 @@ body {
   height: 100vh;
   width: 100%;
   background-color: #f2f2f2;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #f2f2f2;
+  text-align: left;
+  text-rendering: optimizeLegibility;
+}
+
+p {
+  font-family: "Lato", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #f2f2f2;
+  text-align: left;
+  text-rendering: optimizeLegibility;
 }
 
 /*# sourceMappingURL=index.css.map */
