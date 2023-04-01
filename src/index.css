@@ -122,6 +122,7 @@ body {
   border-radius: 5px;
   background-color: #73CDD8;
   padding: 0.4rem;
+  margin-bottom: 0.5rem;
 }
 #home .container__datos .datos__title span {
   margin-top: 0rem;
@@ -131,6 +132,7 @@ body {
   color: #f2f2f2;
 }
 #home .container__datos .dato__nombre, #home .container__datos .dato__correo-electronico {
+  margin-bottom: 0.3rem;
   height: auto;
   width: 100%;
 }
@@ -426,7 +428,7 @@ input {
   text-align: left;
   text-rendering: optimizeLegibility;
   width: 100%;
-  padding: 5px;
+  padding: 10px;
   padding-left: 10PX;
   line-height: 0.3rem;
 }

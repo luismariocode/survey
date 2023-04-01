@@ -80,6 +80,7 @@
       border-radius: 5px;
       background-color: $color__secondary;
       padding: 0.4rem;
+      margin-bottom:.5rem ;
       // border: 2px solid blue;
       span{
         margin-top: 0rem;
@@ -93,6 +94,7 @@
 
     .dato__nombre, .dato__correo-electronico {
       // border: 1px solid red;
+      margin-bottom: .3rem;
       height: auto;
       width: 100%;
     }
