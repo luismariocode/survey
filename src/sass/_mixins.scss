@@ -3,21 +3,21 @@
    ========================================================================== */
 
 // Styles for mobile
-@mixin sm {
+@mixin sm-mobile {
     @media only screen and (max-width: 519px) {
         @content;
     }
 }	
 
 // Styles for tablet
-@mixin md {
+@mixin md-tablet {
     @media only screen and (min-width: 520px) and (max-width: 1023px) {
         @content;
     }
 }
 
 // Styles for desktop
-@mixin lg {
+@mixin lg-desktop {
     @media only screen and (min-width: 1024px) {
         @content;
     }

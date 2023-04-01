@@ -1,3 +1,6 @@
+@import "../variables"; // Variables: Colors, fonts, etc.
+@import "../mixins"; // Mixins
+@import "../media-queries"; // Media queries --> mobile, tablet, desktop
 
 
 .survey{
@@ -253,13 +256,14 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
+        color: $color__secondary-dark;
         align-items: center;
         height: 75vh;
         width: 75vw;
         background-color: #ffffff;
         padding: 20px;
         border-radius: 10px;
-        border: 3px solid #1c1c1c;
+        border: 3px solid $color__secondary;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
         transition: all .5s ease;
 
@@ -274,7 +278,7 @@
                 margin: 15px 10px;
                 border-radius: 5px;
                 font-size: 1.3rem;
-                font-family: 'Roboto', sans-serif;
+                font-family: $font__primary;
                 cursor: pointer;
 
                 &--no {
@@ -283,7 +287,7 @@
                 }
 
                 &--si {
-                    background-color: #1c1c1c;
+                    background-color: $color__secondary-dark;
                     color: #fff;
 
                 }

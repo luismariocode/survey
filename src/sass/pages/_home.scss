@@ -1,5 +1,7 @@
-@import "_variables.scss";
-@import "_mixins.scss";
+@import "../variables"; // Variables: Colors, fonts, etc.
+@import "../mixins"; // Mixins
+@import "../media-queries"; // Media queries --> mobile, tablet, desktop
+
 
 #home {
   display: grid;
@@ -7,7 +9,15 @@
   height: 100vh;
   width: 100%;
 
-  @include md {
+  @media #{$mobile} {
+    .home__info{
+      background-color: tomato;
+    }
+  }	
+    
+  }
+
+  @include md-tablet {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
 
@@ -53,7 +63,7 @@
     }
   }
 
-  @include sm {
+  @include sm-mobile {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
 
@@ -138,7 +148,7 @@
   place-content: center;
   width: 100%;
   height: 100%;
-  background-color: $color__light;
+  background-color: #fff;
 
   .container__datos {
     display: flex;
