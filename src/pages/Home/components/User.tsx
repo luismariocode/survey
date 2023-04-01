@@ -65,7 +65,7 @@ const User: React.FC = () => {
           <span className="material-symbols-outlined">
             account_circle
           </span>
-          <h2>Ingresa tus Datos</h2>
+          <h2>INGRESA TUS DATOS</h2>
         </div>
         
           
@@ -97,7 +97,7 @@ const User: React.FC = () => {
             />
           </div>
 
-          <div className="dato__correo-electronico">  
+          <div className="container__btn--empezar">  
             <ButtonStart onClick={handleSaveEntries} disabled={!isValid} />
           </div>
         

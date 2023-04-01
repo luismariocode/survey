@@ -30,45 +30,6 @@ body {
 /* ==========================================================================
    Components
    ========================================================================== */
-.button {
-  opacity: 1;
-  width: 350px;
-  border-radius: 20px;
-  border: 2px solid #6378EB;
-  background-color: #bdc6f7;
-  color: #6378EB;
-  visibility: visible;
-  font-size: 1.5rem;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 500;
-  padding: 1rem;
-  margin-top: 2rem;
-  cursor: pointer;
-  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease-in-out;
-}
-.button:hover {
-  background-color: #6378EB;
-  color: #f2f2f2;
-  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.25);
-}
-
-.button:disabled {
-  visibility: hidden;
-  opacity: 0;
-  transition: all 0.3s ease-in-out;
-}
-
-.button__small {
-  margin-right: 5px;
-  height: 40px;
-  width: 40px;
-  border-radius: 10px;
-  color: #1a36ce;
-  background-color: #bdc6f7;
-  border: 2px solid #1a36ce;
-}
-
 /* ==========================================================================
    Variables
    ========================================================================== */
@@ -95,45 +56,6 @@ body {
 /* ==========================================================================
    Components
    ========================================================================== */
-.button {
-  opacity: 1;
-  width: 350px;
-  border-radius: 20px;
-  border: 2px solid #6378EB;
-  background-color: #bdc6f7;
-  color: #6378EB;
-  visibility: visible;
-  font-size: 1.5rem;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 500;
-  padding: 1rem;
-  margin-top: 2rem;
-  cursor: pointer;
-  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease-in-out;
-}
-.button:hover {
-  background-color: #6378EB;
-  color: #f2f2f2;
-  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.25);
-}
-
-.button:disabled {
-  visibility: hidden;
-  opacity: 0;
-  transition: all 0.3s ease-in-out;
-}
-
-.button__small {
-  margin-right: 5px;
-  height: 40px;
-  width: 40px;
-  border-radius: 10px;
-  color: #1a36ce;
-  background-color: #bdc6f7;
-  border: 2px solid #1a36ce;
-}
-
 /* ==========================================================================
    Media queries
    ========================================================================== */
@@ -147,7 +69,7 @@ body {
   height: 100vh;
   width: 100%;
   overflow: hidden;
-  margin-top: 35px;
+  margin-top: 1rem;
   padding: 0 20px;
 }
 #home .home__info {
@@ -167,7 +89,7 @@ body {
   border: 2px solid blue;
 }
 #home .home__subtitle {
-  margin-top: 2rem;
+  margin-top: 1rem;
   width: 100%;
   border: 2px solid blue;
 }
@@ -176,12 +98,50 @@ body {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  margin-top: 2rem;
+  margin-top: 0.5rem;
   height: auto;
   width: 100%;
   background-color: green;
   border: 1px solid tomato;
   box-sizing: content-box;
+}
+#home .container__datos {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  height: auto;
+  background-color: cadetblue;
+  border: 1px solid tomato;
+  box-sizing: content-box;
+}
+#home .container__datos .datos__title {
+  display: flex;
+  justify-content: flex-start;
+  color: #f2f2f2;
+  margin-top: 1rem;
+  width: 100%;
+  border: 2px solid blue;
+}
+#home .container__datos .datos__title span {
+  margin-top: 0.2rem;
+  margin-right: 0.7rem;
+}
+#home .container__datos .dato__nombre, #home .container__datos .dato__correo-electronico {
+  border: 1px solid red;
+  height: auto;
+  width: 100%;
+}
+#home .container__datos .container__btn--empezar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  width: 100%;
+  height: 100vh;
+  margin-top: 1rem;
+  border: 1px solid red;
+  font-size: 3rem;
 }
 
 /* ==========================================================================
@@ -210,45 +170,6 @@ body {
 /* ==========================================================================
    Components
    ========================================================================== */
-.button {
-  opacity: 1;
-  width: 350px;
-  border-radius: 20px;
-  border: 2px solid #6378EB;
-  background-color: #bdc6f7;
-  color: #6378EB;
-  visibility: visible;
-  font-size: 1.5rem;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 500;
-  padding: 1rem;
-  margin-top: 2rem;
-  cursor: pointer;
-  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease-in-out;
-}
-.button:hover {
-  background-color: #6378EB;
-  color: #f2f2f2;
-  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.25);
-}
-
-.button:disabled {
-  visibility: hidden;
-  opacity: 0;
-  transition: all 0.3s ease-in-out;
-}
-
-.button__small {
-  margin-right: 5px;
-  height: 40px;
-  width: 40px;
-  border-radius: 10px;
-  color: #1a36ce;
-  background-color: #bdc6f7;
-  border: 2px solid #1a36ce;
-}
-
 /* ==========================================================================
    Media queries
    ========================================================================== */
@@ -496,12 +417,26 @@ p {
 
 input {
   font-family: "Lato", sans-serif;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: 400;
   color: #f2f2f2;
   text-align: left;
   text-rendering: optimizeLegibility;
   width: 100%;
+  padding: 5px;
+}
+
+button:disabled {
+  font-size: 1.5rem;
+  background-color: #32a5b3;
+  color: #f2f2f2;
+  border: 1px solid #32a5b3;
+  cursor: not-allowed;
+}
+button:disabled span:last-child {
+  position: relative;
+  left: 0;
+  top: 2px;
 }
 
 /*# sourceMappingURL=index.css.map */
