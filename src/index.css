@@ -31,6 +31,12 @@ body {
    Components
    ========================================================================== */
 /* ==========================================================================
+   Media queries
+   ========================================================================== */
+/* ==========================================================================
+   Media queries
+   ========================================================================== */
+/* ==========================================================================
    Variables
    ========================================================================== */
 /* ==========================================================================
@@ -71,11 +77,19 @@ body {
   overflow: hidden;
   margin: 0;
   padding: 0 20px;
-  background-color: #6378EB;
-  background: hsl(231, 77%, 65%);
   background: linear-gradient(45deg, hsl(231, 77%, 65%) 20%, hsl(187, 56%, 65%) 100%);
-  background: -moz-linear-gradient(45deg, hsl(231, 77%, 65%) 20%, hsl(187, 56%, 65%) 100%);
-  background: -webkit-linear-gradient(45deg, hsl(231, 77%, 65%) 20%, hsl(187, 56%, 65%) 100%);
+}
+@media only screen and (min-width: 520px) and (max-width: 1023px) {
+  #home {
+    padding-top: 12.5%;
+    padding-bottom: 25%;
+    padding-left: 15%;
+    padding-right: 15%;
+  }
+  #home h1 {
+    font-size: 4.5rem;
+    line-height: 4.5rem;
+  }
 }
 #home .home__info {
   display: flex;
@@ -388,6 +402,7 @@ body {
   background-color: #f2f2f2;
   padding: 0;
   margin: 0;
+  overflow: hidden;
 }
 
 h1 {

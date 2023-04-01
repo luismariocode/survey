@@ -1,4 +1,6 @@
 @import 'variables';
+@import 'mixins';
+@import 'media-queries';
 @import 'pages/home';
 @import 'pages/survey';
 
@@ -21,6 +23,8 @@ body{
     background-color: $color__light;
     padding: 0;
     margin: 0;
+    overflow: hidden;
+
   }
 
   h1{
