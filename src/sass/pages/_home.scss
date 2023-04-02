@@ -13,11 +13,29 @@
   padding:0 20px;
   background: linear-gradient(45deg, hsla(231, 77%, 65%, 1) 20%, hsla(187, 56%, 65%, 1) 100%);
 
+
+  button{
+    background-color: #fff;
+    color: $color__secondary-dark;
+    transition: all 0.2s ease-in-out;
+    border-radius:15px ;
+
+    & span{
+      @include move-left
+    }
+  }
+
   @include md-tablet {
-    padding-top: 12.5%;
+
+    padding-top: 2%;
     padding-bottom: 25%;
     padding-left: 15%;
     padding-right: 15%;
+
+    .container__btn--empezar
+    {
+      padding-top: 1rem;
+    }
 
     h1{
       font-size: $font-size__primary * 1.5;
@@ -35,15 +53,6 @@
 
 
     button{
-      background-color: #fff;
-      color: $color__secondary-dark;
-      transition: all 0.2s ease-in-out;
-      border-radius:15px ;
-
-      & span{
-        @include move-left
-      }
-
 
       &:hover{
         background-color: $color__secondary;

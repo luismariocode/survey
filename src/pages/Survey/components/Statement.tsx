@@ -43,10 +43,10 @@ const Statement: React.FC<StatementProps> = ({
     localStorage.setItem("entries", JSON.stringify(newEntryValues));
     setEntryValues(newEntryValues);
 
- 
 
 
-  
+
+
   }
 
   return (
@@ -55,27 +55,29 @@ const Statement: React.FC<StatementProps> = ({
         <q className="statement__description">
           {description}
         </q>
-        <div className="statement__options">
-          {options.map((option) => {
-            return (
-              <div key={option.label} className="option">
-                <label className="option-label" htmlFor={option.label}>
-                  <div className="option-square">
-                    <span>{option.label}</span>
-                  </div>
-                  <input
-                    type="radio"
-                    name={entrie}
-                    id={option.label}
-                    value={option.label}
-                    checked={selectedOption === option.label}
-                    onChange={handleOptionChange}
-                    hidden
-                  />
-                </label>
-              </div>
-            );
-          })}
+        <div className="container__options">
+          <div className="statement__options">
+            {options.map((option) => {
+              return (
+                <div key={option.label} className="option">
+                  <label className="option-label" htmlFor={option.label}>
+                    <div className="option-square">
+                      <span>{option.label}</span>
+                    </div>
+                    <input
+                      type="radio"
+                      name={entrie}
+                      id={option.label}
+                      value={option.label}
+                      checked={selectedOption === option.label}
+                      onChange={handleOptionChange}
+                      hidden
+                    />
+                  </label>
+                </div>
+              );
+            })}
+          </div>
         </div>
       </div>
     </>

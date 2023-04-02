@@ -89,12 +89,24 @@ body {
   padding: 0 20px;
   background: linear-gradient(45deg, hsl(231, 77%, 65%) 20%, hsl(187, 56%, 65%) 100%);
 }
+#home button {
+  background-color: #fff;
+  color: #32a5b3;
+  transition: all 0.2s ease-in-out;
+  border-radius: 15px;
+}
+#home button span {
+  animation: move-left 1s ease-in-out infinite;
+}
 @media only screen and (min-width: 520px) and (max-width: 1023px) {
   #home {
-    padding-top: 12.5%;
+    padding-top: 2%;
     padding-bottom: 25%;
     padding-left: 15%;
     padding-right: 15%;
+  }
+  #home .container__btn--empezar {
+    padding-top: 1rem;
   }
   #home h1 {
     font-size: 4.5rem;
@@ -107,15 +119,6 @@ body {
     grid-template-columns: 1fr 1fr;
     padding-left: 0;
     padding-right: 0;
-  }
-  #home button {
-    background-color: #fff;
-    color: #32a5b3;
-    transition: all 0.2s ease-in-out;
-    border-radius: 15px;
-  }
-  #home button span {
-    animation: move-left 1s ease-in-out infinite;
   }
   #home button:hover {
     background-color: #73CDD8;
@@ -337,7 +340,6 @@ body {
   flex-direction: column;
   width: 100%;
   height: 100%;
-  justify-content: space-between;
   align-items: center;
   padding: 0 10px;
   margin-top: 5px;
@@ -357,68 +359,37 @@ body {
   text-align: center;
   color: #1a36ce;
 }
-
-.modal--reboot {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.5s ease;
-}
-.modal--reboot .modal__container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  color: #32a5b3;
-  align-items: center;
-  height: 75vh;
-  width: 75vw;
-  background-color: #ffffff;
-  padding: 20px;
-  border-radius: 10px;
-  border: 3px solid #73CDD8;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  transition: all 0.5s ease;
-}
-.modal--reboot .modal__container .modal__buttons {
+.survey .survey__container .container__options {
+  display: block;
   width: 100%;
-  display: flex;
-  justify-content: center;
-}
-.modal--reboot .modal__container .modal__buttons .modal__button {
-  margin-top: 10px;
-  padding: 10px 10px;
-  margin: 15px 10px;
-  border-radius: 5px;
-  font-size: 1.3rem;
-  font-family: "Montserrat", sans-serif;
-  cursor: pointer;
-}
-.modal--reboot .modal__container .modal__buttons .modal__button--no {
-  background-color: #F3CA40;
-}
-.modal--reboot .modal__container .modal__buttons .modal__button--si {
-  background-color: #32a5b3;
-  color: #fff;
-}
-.modal--reboot .modal__container .modal__icon {
-  font-size: 4rem;
-}
-.modal--reboot .modal__container > h2 {
-  font-size: 2.5rem;
-  font-weight: 700;
-  margin-bottom: 10px;
-  line-height: 2.5rem;
+  height: auto;
+  margin: 0 auto;
+  padding: 0;
   text-align: center;
 }
-
-.modal--reboot.modal--hidden {
-  visibility: hidden;
-  transition: all 0.2s ease;
+.survey .survey__container .statement__options {
+  display: inline-flex;
+  width: 75%;
+  height: 80px;
+  align-self: center;
+  justify-content: space-evenly;
+  align-items: center;
+  border-radius: 10px;
+  background-color: #c3e9ee;
+  padding: 20px;
+}
+.survey .survey__container .statement__options .option {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  height: 55px;
+  width: 55px;
+  font-size: 1.3rem;
+  border-radius: 5px;
+  border: 2px solid #32a5b3;
+  color: #6378EB;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
 }
 
 body {
