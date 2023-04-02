@@ -403,6 +403,17 @@ body {
   overflow: hidden;
 }
 
+#root {
+  display: block;
+  position: relative;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+  zoom: 1;
+}
+
 .main {
   display: block;
   justify-content: center;

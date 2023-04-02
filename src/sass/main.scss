@@ -4,6 +4,9 @@
 @import 'pages/home';
 @import 'pages/survey';
 
+
+
+
 body{
     padding:0;
     background-color: #f2f2f2;
@@ -13,6 +16,17 @@ body{
     font-size: 2.5rem;
     line-height: auto;
     overflow: hidden;
+  }
+ 
+  #root{
+    display: block;
+    position: relative;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+    zoom: 1;
   }
   
   .main{
