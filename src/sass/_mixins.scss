@@ -1,24 +1,8 @@
-/* ==========================================================================
-   Media queries
-   ========================================================================== */
-
-// Styles for mobile
-@mixin sm-mobile {
-    @media only screen and (max-width: 519px) {
-        @content;
-    }
-}	
-
-// Styles for tablet
-@mixin md-tablet {
-    @media only screen and (min-width: 520px) and (max-width: 1023px) {
-        @content;
-    }
+@keyframes move-left {
+    0% { left: 0; }
+    100% { left: 3px; }
 }
 
-// Styles for desktop
-@mixin lg-desktop {
-    @media only screen and (min-width: 1024px) {
-        @content;
-    }
+@mixin move-left() {
+    animation: move-left 1s ease-in-out infinite;
 }

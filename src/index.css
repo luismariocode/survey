@@ -30,9 +30,14 @@ body {
 /* ==========================================================================
    Components
    ========================================================================== */
-/* ==========================================================================
-   Media queries
-   ========================================================================== */
+@keyframes move-left {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: 3px;
+  }
+}
 /* ==========================================================================
    Media queries
    ========================================================================== */
@@ -62,9 +67,14 @@ body {
 /* ==========================================================================
    Components
    ========================================================================== */
-/* ==========================================================================
-   Media queries
-   ========================================================================== */
+@keyframes move-left {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: 3px;
+  }
+}
 /* ==========================================================================
    Media queries
    ========================================================================== */
@@ -89,6 +99,45 @@ body {
   #home h1 {
     font-size: 4.5rem;
     line-height: 4.5rem;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  #home {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  #home button {
+    background-color: #fff;
+    color: #32a5b3;
+    transition: all 0.2s ease-in-out;
+    border-radius: 15px;
+  }
+  #home button span {
+    animation: move-left 1s ease-in-out infinite;
+  }
+  #home button:hover {
+    background-color: #73CDD8;
+    color: #f2f2f2;
+    box-shadow: none;
+    transition: all 0.2s ease-in-out;
+  }
+  #home .home__info, #home .home__data {
+    padding-top: 25%;
+  }
+  #home .home__info {
+    background: linear-gradient(45deg, hsl(231, 77%, 65%) 20%, hsl(187, 56%, 65%) 100%);
+  }
+  #home .home__info .home__title, #home .home__info .home__subtitle {
+    padding-left: 12.5%;
+    padding-right: 12.5%;
+  }
+  #home .home__data {
+    background-color: #f2f2f2;
+  }
+  #home .home__data .container__datos {
+    width: 75%;
   }
 }
 #home .home__info {
@@ -184,140 +233,129 @@ body {
 /* ==========================================================================
    Components
    ========================================================================== */
-/* ==========================================================================
-   Media queries
-   ========================================================================== */
+@keyframes move-left {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: 3px;
+  }
+}
 /* ==========================================================================
    Media queries
    ========================================================================== */
 .survey {
-  display: flex;
+  display: block;
+  width: 100%;
   height: 100vh;
-  flex-direction: column;
-  width: 750px;
-  min-width: 500px;
-  align-items: center;
-  background-color: #fff;
-  box-shadow: 0px 0px 7px 3px rgba(0, 0, 0, 0.1);
-  padding: 30px;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  background: rgb(242, 242, 242);
+  background: linear-gradient(0deg, rgb(242, 242, 242) 0%, rgb(255, 255, 255) 100%);
 }
 .survey .survey__container {
   display: flex;
   flex-direction: column;
   width: 100%;
   height: 100%;
-  justify-content: space-between;
 }
-.survey .survey__header {
+.survey .survey__container .survey__header {
   display: flex;
-  width: 100%;
-  height: 40px;
-  font-size: 20px;
   justify-content: flex-end;
-}
-.survey .survey__header .survey__count {
-  display: flex;
   align-items: center;
-  justify-content: center;
-  width: 80px;
-  height: 40px;
-  border-radius: 10px;
-  background-color: #bdc6f7;
-  color: #1a36ce;
-  border: 2px solid #1a36ce;
-  margin-right: 10px;
-}
-.survey .container--buttonPrev {
-  display: flex;
+  padding-right: 10px;
   width: 100%;
-  height: 35px;
-  justify-content: flex-start;
-  margin-top: 20px;
-  margin-bottom: 50px;
+  height: 75px;
+  background-color: tomato;
+  background-color: #c3e9ee;
+  box-shadow: inset 0px -1px 5px -3px rgba(0, 0, 0, 0.1);
 }
-.survey .container--statement {
+.survey .survey__container .survey__header .button__reboot {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  padding: 0;
+  margin-right: 5px;
+  background-color: #c3e9ee;
+}
+.survey .survey__container .survey__header .button__reboot span {
+  font-size: 2rem;
+  color: #6378EB;
+  line-height: 1.5rem;
+}
+.survey .survey__container .survey__header .survey__count {
+  display: inline-flex; /* o display: flex; */
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100%; /* asegura que el div tiene una altura definida */
+  width: 80px;
+  border: 2px solid #f2f2f2;
+  border-radius: 10px;
+  height: 40px;
+  background-color: #bdc6f7;
+}
+.survey .survey__container .survey__header .survey__count span {
+  font-size: 1.05rem;
+  color: #1a36ce;
+  display: inline-block;
+  vertical-align: middle;
+}
+.survey .survey__container .container--buttonPrev {
+  display: block;
+  width: 100%;
+  height: 40px;
+  margin: 0;
+  padding: 0 10px;
+  margin-top: 20px;
+}
+.survey .survey__container .container--buttonPrev .button__prev {
+  display: block;
+  width: 40px;
+  background-color: none;
+  border: none;
+  height: 40px;
+  cursor: pointer;
+  padding: 0;
+  padding-right: 5px;
+  border-radius: 50%;
+}
+.survey .survey__container .container--buttonPrev .button__prev :hover {
+  color: #73CDD8;
+  transition: all 0.2s ease-in-out;
+}
+.survey .survey__container .container--buttonPrev .button__prev span {
+  position: relative;
+  right: 5px;
+  font-size: 2rem;
+  color: #6378EB;
+  line-height: 1.5rem;
+}
+.survey .survey__container .container--statement {
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 320px;
+  height: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  margin-top: 5px;
+}
+.survey .survey__container .statement__description {
+  display: flex;
   justify-content: center;
   align-items: center;
-}
-.survey .container--buttons-bottom {
-  display: flex;
   width: 100%;
-  height: 50px;
-  justify-content: flex-end;
-  align-items: flex-end;
-  margin-top: 20px;
-}
-.survey .container--buttons-bottom .button--next {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 5px;
-  margin-bottom: 20px;
-  font-size: 1.5rem;
-  width: 120px;
-  height: 40px;
-  font-family: "Lato", sans-serif;
-  font-weight: 500;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  color: #32a5b3;
-  transition: all 0.2s ease-in-out;
-}
-.survey .container--buttons-bottom .button--next:hover {
-  color: #6378EB;
-  margin-bottom: 25px;
-  transition: all 0.25s ease-in-out;
-}
-.survey .statement__description {
-  display: flex;
-  width: 100%;
-  height: 275px;
-  background-color: #f2f2f2;
-  justify-content: center;
-  align-items: center;
-  border: 3px solid #1a36ce;
-  padding: 20px;
-  font-weight: 400;
-  font-size: 20px;
-  text-align: center;
-  border-radius: 20px;
-  box-shadow: 0px 5px 15px -3px rgba(0, 0, 0, 0.1);
-  color: #1a36ce;
-}
-.survey .statement__options {
-  display: flex;
-  width: 100%;
-  height: 180px;
-  justify-content: flex-end;
-  align-items: center;
-  margin-top: 20px;
-  font-size: 2rem;
-  border-radius: 20px;
-}
-.survey .statement__options .option {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-right: 10px;
-  background-color: #c3e9ee;
-  height: 60px;
-  width: 60px;
+  height: 300px;
+  border: 3px solid #6378EB;
+  margin: 15px auto;
+  padding: 25px;
   border-radius: 10px;
-  font-size: 1.7rem;
-  border: 2px solid #32a5b3;
-  cursor: pointer;
-  color: #6378EB;
-  transition: all 0.3s ease-in-out;
-}
-.survey .statement__options .option:hover {
-  color: #f2f2f2;
-  background-color: #32a5b3;
-  transition: all 0.3s ease-in-out;
+  font-size: 1.35rem;
+  background-color: #fff;
+  text-align: center;
+  color: #1a36ce;
 }
 
 .modal--reboot {
@@ -459,13 +497,9 @@ button {
   visibility: visible;
   opacity: 1;
   font-size: 1.2rem;
-  background-color: #32a5b3;
-  color: #f2f2f2;
-  border: 1px solid #32a5b3;
-  border-radius: 10px;
-  padding: 5px 15px;
+  padding: 10px 15px;
   font-family: "Montserrat", sans-serif;
-  border: 2px solid #c3e9ee;
+  border: 3px solid #c3e9ee;
   cursor: pointer;
 }
 button:disabled {

@@ -2,11 +2,9 @@
 @import "../mixins"; // Mixins
 @import "../media-queries"; // Media queries --> mobile, tablet, desktop
 
-
 #home {
   display: flex;
   flex-direction: column;
-  // justify-content: center;
   margin:auto;
   height: 100vh;
   width: 100%;
@@ -14,7 +12,6 @@
   margin: 0;
   padding:0 20px;
   background: linear-gradient(45deg, hsla(231, 77%, 65%, 1) 20%, hsla(187, 56%, 65%, 1) 100%);
- 
 
   @include md-tablet {
     padding-top: 12.5%;
@@ -28,6 +25,55 @@
     }
   }
 
+  @include lg-desktop {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-left: 0;
+    padding-right: 0;
+
+
+
+
+    button{
+      background-color: #fff;
+      color: $color__secondary-dark;
+      transition: all 0.2s ease-in-out;
+      border-radius:15px ;
+
+      & span{
+        @include move-left
+      }
+
+
+      &:hover{
+        background-color: $color__secondary;
+        color: $color__light;
+        box-shadow: none;
+        transition: all 0.2s ease-in-out;
+      }
+    }
+
+    .home__info , .home__data{
+      padding-top: 25%;
+    }
+
+    .home__info{
+      background: linear-gradient(45deg, hsla(231, 77%, 65%, 1) 20%, hsla(187, 56%, 65%, 1) 100%);
+
+      .home__title, .home__subtitle{
+        padding-left:12.5% ;
+        padding-right: 12.5%;
+      }
+    }
+
+    .home__data{
+      background-color: $color__light;
+      .container__datos{
+        width: 75%;
+        
+      }
+    }
+  }
 
   .home__info {
     display: flex;
@@ -36,8 +82,6 @@
     align-items: center;
     height: auto;
     width: 100%;
-    // background-color: hotpink;
-    // border: 1px solid tomato;
     box-sizing: content-box;
   }
 
@@ -50,7 +94,7 @@
   .home__subtitle {
     margin-top:1rem;
     width: 100%;
-    // border: 2px solid blue;
+    
   }
 
   .home__data {
@@ -58,14 +102,10 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    // margin-top: .5rem;
     height: auto;
     width: 100%;
-    // background-color: green;
-    // border: 1px solid tomato;
     box-sizing: content-box;
   }
-
 
   .container__datos {
     display: flex;
@@ -75,22 +115,18 @@
     width: 100%;
     height: auto;
     padding-top: 35px;
-    // background-color: cadetblue;
-    // border: 1px solid tomato;
     box-sizing: content-box;
 
     .datos__title {
       display: flex;
       justify-content: flex-start;
       align-items: center;
-      
-      // margin-top: 1rem;
       width: 100%;
       border-radius: 5px;
       background-color: $color__secondary;
       padding: 0.4rem;
       padding-bottom:.5rem ;
-      // border: 2px solid blue;
+
       span{
         margin-top: 0rem;
         margin-left: .3rem;
@@ -102,7 +138,6 @@
     }
 
     .dato__nombre, .dato__correo-electronico {
-      // border: 1px solid red;
       margin-bottom: .3rem;
       height: auto;
       width: 100%;
@@ -115,207 +150,7 @@
       padding-top: 2rem;
       width: 100%;
       height: 100vh;
-      
-      // border: 1px solid red;
-
-      
-    
     }
-
   }
-  
-
-
-
 }
   
-//   @include md-tablet {
-//     grid-template-columns: 1fr;
-//     grid-template-rows: 1fr 1fr;
-
-//     .home__info {
-//       grid-column: 1/2;
-//       grid-row: 1/2;
-//       background-color: $color__primary;
-//       justify-content: center;
-//       align-items: center;
-//       padding: 0;
-
-//       & .home__title {
-//         padding-bottom: 0;
-//         margin-bottom: -$spacing__secondary;
-//       }
-
-//       & .home__subtitle {
-//         display: flex;
-//         flex-wrap: wrap;
-//         align-content: space-around;
-//         justify-content: center;
-//         font-weight: 400;
-//       }
-//     }
-
-//     .home__data {
-//       grid-column: 1/2;
-//       grid-row: 2/3;
-//       background-color: $color__primary;
-
-//       .container__datos {
-//         justify-content: flex-start;
-
-//         .datos__title {
-//           color: $color__light;
-//           font-weight: 400;
-//         }
-//       }
-//     }
-
-//     .button {
-//       background-color: $color__light;
-//     }
-//   }
-
-//   @include sm-mobile {
-//     grid-template-columns: 1fr;
-//     grid-template-rows: 1fr 1fr;
-
-//     .home__info {
-//       grid-column: 1/2;
-//       grid-row: 1/2;
-//       background-color: $color__primary;
-//       justify-content: center;
-//       align-items: center;
-//       padding: 0;
-
-//       & .home__title {
-//         padding-bottom: 0;
-//         margin-bottom: -$spacing__secondary;
-//       }
-
-//       & .home__subtitle {
-//         display: flex;
-//         flex-wrap: wrap;
-//         align-content: space-around;
-//         justify-content: center;
-//         font-weight: 400;
-//       }
-//     }
-
-//     .home__data {
-//       grid-column: 1/2;
-//       grid-row: 2/3;
-//       background-color: $color__primary;
-
-//       .container__datos {
-//         justify-content: flex-start;
-
-//         .datos__title {
-//           color: $color__light;
-//           font-size: 20px;
-//           font-weight: 400;
-//         }
-//       }
-//     }
-
-//     .button {
-//       background-color: $color__light;
-//     }
-//   }
-
-
-// .home__info {
-//   display: flex;
-//   grid-column: 1/2;
-//   flex-direction: column;
-//   justify-content: right;
-//   align-items: flex-start;
-//   width: 100%;
-//   height: 100%;
-//   background-color: $color__primary;
-
-//   padding-left: 25%;
-
-//   & .home__title {
-//     display: flex;
-//     align-items: flex-end;
-//     padding-bottom: $spacing__secondary;
-//     font-weight: $font-weight__primary;
-//     color: $color__light;
-//     width: 75%;
-//     height: 50%;
-//   }
-
-//   & .home__subtitle {
-//     font-size: $font-size__secondary;
-//     color: $color__light;
-//     width: 75%;
-//     height: 50%;
-//   }
-// }
-
-// .home__data {
-//   display: flex;
-//   grid-column: 2/3;
-//   flex-direction: column;
-//   place-content: center;
-//   width: 100%;
-//   height: 100%;
-//   background-color: #fff;
-
-//   .container__datos {
-//     display: flex;
-//     flex-direction: column;
-//     place-content: center;
-//     padding: $spacing__primary;
-//     width: 100%;
-//     height: 100%;
-
-//     .datos__title {
-//       display: inline-flex;
-//       align-items: center;
-//       font-size: $font-size__secondary;
-//       font-weight: $font-weight__primary;
-//       color: $color__dark;
-//       align-self: flex-start;
-
-//       width: 100%;
-//       justify-content: center;
-
-//       & span {
-//         font-size: $font-size__primary;
-//         margin-right: $spacing__primary;
-//       }
-//     }
-
-//     .dato__nombre,
-//     .dato__correo-electronico {
-//       display: inline-flex;
-//       align-items: center;
-//       width: 100%;
-//       justify-content: center;
-//       margin-top: $spacing__secondary;
-
-//       & input {
-//         display: inline-flex;
-//         align-items: center;
-//         width: 75%;
-//         justify-content: center;
-//         padding: $spacing__primary;
-//         border: $border__primary;
-//         border-radius: $border-radius__primary;
-//         font-size: $font-size__secondary;
-//         font-weight: $font-weight__primary;
-//         color: $color__dark;
-//         background-color: $color__light;
-//         margin-top: $spacing__primary;
-//         padding-left: $spacing__primary;
-//       }
-
-//       .material-symbols-sharp {
-//         position: relative;
-//         top: 3px;
-//         left: 10px;
-//       }
-//     }
-//   }
-// }

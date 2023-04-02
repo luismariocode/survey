@@ -83,13 +83,9 @@ body{
     visibility: visible;
     opacity: 1;
     font-size: $font-size__secondary * .8;
-    background-color: $color__secondary-dark;
-    color: $color__light;
-    border: 1px solid $color__secondary-dark;
-    border-radius: 10px;
-    padding: 5px 15px;
+    padding: 10px 15px;
     font-family: $font__primary;
-    border: 2px solid $color__secondary-light;
+    border: 3px solid $color__secondary-light;
     cursor: pointer;
 
     &:disabled{

@@ -52,9 +52,9 @@ const Statement: React.FC<StatementProps> = ({
   return (
     <>
       <div className="container--statement">
-        <div className="statement__description">
-          <h3>{description}</h3>
-        </div>
+        <q className="statement__description">
+          {description}
+        </q>
         <div className="statement__options">
           {options.map((option) => {
             return (
