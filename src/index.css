@@ -92,15 +92,6 @@ body {
   padding: 0 20px;
   background: linear-gradient(45deg, hsl(231, 77%, 65%) 20%, hsl(187, 56%, 65%) 100%);
 }
-#home button {
-  background-color: #fff;
-  color: #32a5b3;
-  transition: all 0.2s ease-in-out;
-  border-radius: 15px;
-}
-#home button span {
-  animation: move-left 1s ease-in-out infinite;
-}
 @media only screen and (min-width: 520px) and (max-width: 1023px) {
   #home {
     padding-top: 2%;
@@ -146,8 +137,20 @@ body {
     width: 75%;
   }
 }
+#home button {
+  background-color: #fff;
+  color: #32a5b3;
+  transition: all 0.2s ease-in-out;
+  border-radius: 15px;
+}
+#home button span {
+  animation: move-left 1s ease-in-out infinite;
+}
 #home .home__info {
-  display: flex;
+  display: block;
+  position: relative;
+  top: 0;
+  left: 0;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
