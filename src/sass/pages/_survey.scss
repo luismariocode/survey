@@ -19,8 +19,9 @@
         // border: 1px solid tomato;
     }
 
+   
     .container--statement{
-         padding: 0 10px;
+        padding: 0 10px;
     }
 
     .container--buttonPrev {
@@ -79,6 +80,11 @@
       
         // border: 1px solid tomato;
     }
+
+    .button__reboot{
+        background-color: $color__secondary-light;
+    }
+
 
     .container--buttonPrev {
         position: relative;

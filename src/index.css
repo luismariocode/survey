@@ -309,6 +309,9 @@ body {
     height: 100px;
     background-color: #c3e9ee;
   }
+  .main .button__reboot {
+    background-color: #c3e9ee;
+  }
   .main .container--buttonPrev {
     position: relative;
     top: 25px;
