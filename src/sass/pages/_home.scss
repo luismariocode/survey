@@ -126,7 +126,8 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    height: auto;
+    max-height: 50%;
+    height: 50%;
     width: 100%;
     box-sizing: content-box;
   }
@@ -141,7 +142,7 @@
     align-items: flex-start;
     width: 100%;
     min-height: 320px;
-    height: auto;
+   
     padding-top: 35px;
     box-sizing: content-box;
 
