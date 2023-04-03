@@ -89,6 +89,13 @@ body {
   padding: 0 20px;
   background: linear-gradient(45deg, hsl(231, 77%, 65%) 20%, hsl(187, 56%, 65%) 100%);
 }
+#home .home__info {
+  position: relative;
+  height: 50vh;
+  width: 100%;
+  position: 0;
+  left: 0;
+}
 @media only screen and (min-width: 520px) and (max-width: 1023px) {
   #home {
     padding-top: 2%;
