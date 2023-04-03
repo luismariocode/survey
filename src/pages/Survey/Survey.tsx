@@ -79,6 +79,7 @@ const Survey: React.FC = () => {
                 <Count count={indexValue.indexPath} total={dataSurvey.length} />
               </div>
               <Outlet />
+              <div className="statement">
               <div className="container--buttonPrev">
                 {indexValue.indexPath > 1 &&
   	              <ButtonPrev onClick={handlePrevQuestion}></ButtonPrev>
@@ -106,7 +107,7 @@ const Survey: React.FC = () => {
               )}
               </div>
 
-              
+              </div>
             </div>
           }
         />

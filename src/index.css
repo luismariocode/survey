@@ -274,9 +274,18 @@ body {
   width: 100%;
   height: 100%;
 }
+.survey .survey__container .statement {
+  display: block;
+  margin-top: 70px;
+  width: 100%;
+  height: 100%;
+}
 .survey .survey__container .survey__header {
   display: flex;
   justify-content: flex-end;
+  position: fixed;
+  top: 0;
+  left: 0;
   align-items: center;
   padding-right: 10px;
   width: 100%;
