@@ -261,6 +261,8 @@ body {
   .main .survey__header {
     position: fixed;
     height: 75px;
+    top: 0;
+    left: 0;
   }
   .main .container--statement {
     padding: 0 10px;
