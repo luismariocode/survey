@@ -17,6 +17,7 @@ const Statement: React.FC<StatementProps> = ({
   const [selectedOption, setSelectedOption] = useState<string>("");
   const [answered, setAnswered] = useState<boolean>(false);
   const [entryValues, setEntryValues] = useState<EntryValues>({});
+  const [descriptionVisible, setDescriptionVisible] = useState<boolean>(false);
 
   useEffect(() => {
     // Cargar respuesta guardada del localStorage
@@ -28,6 +29,11 @@ const Statement: React.FC<StatementProps> = ({
       setSelectedOption(savedValue);
       setAnswered(true);
     }
+
+
+
+
+
   }, [entrie]);
 
   function handleOptionChange(changeEvent: React.ChangeEvent<HTMLInputElement>) {
@@ -52,7 +58,7 @@ const Statement: React.FC<StatementProps> = ({
   return (
     <>
       <div className="container--statement">
-        <q className="statement__description">
+        <q className="statement__description hidden">
           {description}
         </q>
         <div className="container__options">

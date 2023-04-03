@@ -382,6 +382,9 @@ body {
   text-align: center;
   color: #1a36ce;
 }
+.survey .survey__container .statement__description::after, .survey .survey__container .statement__description::before {
+  content: "";
+}
 .survey .survey__container .container__options {
   display: block;
   width: 100%;
@@ -431,9 +434,11 @@ body {
 }
 .survey .container--buttons-bottom .button--next .material-symbols-sharp {
   animation: move-left 1s ease-in-out infinite;
-  font-size: 1.2rem;
+  position: relative;
+  top: 5px;
+  font-size: 1.5rem;
   color: #1a36ce;
-  line-height: 1.5rem;
+  line-height: 0.75rem;
 }
 
 * {
