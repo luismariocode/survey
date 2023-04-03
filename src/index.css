@@ -411,6 +411,7 @@ body {
   font-size: 2.5rem;
   line-height: auto;
   overflow: hidden;
+  box-sizing: border-box;
 }
 
 #root {
@@ -422,7 +423,7 @@ body {
   height: 100vh;
   width: 100vw;
   zoom: 1;
-  box-sizing: content-box;
+  box-sizing: border-box;
 }
 
 .main {
@@ -434,6 +435,7 @@ body {
   padding: 0;
   margin: 0;
   overflow: hidden;
+  box-sizing: border-box;
 }
 
 h1 {
