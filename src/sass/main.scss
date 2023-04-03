@@ -5,7 +5,9 @@
 @import 'pages/survey';
 
 
-
+*{
+  scroll-behavior: smooth;
+}
 
 body{
     display: block;
