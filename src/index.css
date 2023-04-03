@@ -172,7 +172,7 @@ body {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  max-height: 50%;
+  max-height: 320px;
   height: 50%;
   width: 100%;
   box-sizing: content-box;
