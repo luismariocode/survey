@@ -26,13 +26,17 @@ const Survey: React.FC = () => {
 
   useEffect(() => {
 
-    const data = localStorage.getItem("entries") ? JSON.parse(localStorage.getItem("entries") || "{}") : {};
+    
 
-    console.log(data);
+    const doc = document.documentElement || document.body;
+
+  
+    doc.scrollTop = 0;
 
 
 
-  }, [dataSurvey.entries]);
+
+  }, []);
   
   function handlePrevQuestion() {
     const newIndex = indexValue.indexPath - 1;
