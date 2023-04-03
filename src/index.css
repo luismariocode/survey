@@ -355,6 +355,7 @@ body {
   padding: 0;
   padding-right: 5px;
   border-radius: 50%;
+  box-shadow: 0px 2px 2px 1px rgba(0, 0, 0, 0.1);
 }
 .survey .survey__container .container--buttonPrev .button__prev :hover {
   color: #73CDD8;
