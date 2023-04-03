@@ -80,20 +80,23 @@ body {
    ========================================================================== */
 #home {
   display: flex;
-  position: relative;
+  position: fixed;
   top: 0;
   left: 0;
   flex-direction: column;
   margin: auto;
   height: 100vh;
   width: 100%;
-  overflow: hidden;
+  overflow-y: auto;
   margin: 0;
   padding: 0 20px;
   background: linear-gradient(45deg, hsl(231, 77%, 65%) 20%, hsl(187, 56%, 65%) 100%);
 }
 @media only screen and (min-width: 520px) and (max-width: 1023px) {
   #home {
+    position: fixed;
+    top: 0;
+    left: 0;
     padding-top: 2%;
     padding-bottom: 25%;
     padding-left: 15%;
