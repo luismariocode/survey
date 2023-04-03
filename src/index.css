@@ -282,6 +282,7 @@ body {
   .main .survey__header {
     position: fixed;
     height: 75px;
+    margin-top: 0;
   }
   .main .container--buttonPrev {
     position: relative;
