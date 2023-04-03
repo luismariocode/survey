@@ -369,7 +369,7 @@ body {
   cursor: pointer;
   padding: 0;
   margin-right: 5px;
-  background-color: #c3e9ee;
+  background-color: #fff;
 }
 .survey .survey__container .survey__header .button__reboot span {
   font-size: 2rem;
