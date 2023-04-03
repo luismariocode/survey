@@ -84,7 +84,7 @@ body {
   margin: auto;
   height: 100vh;
   width: 100%;
-  overflow-y: auto;
+  overflow: hidden;
   margin: 0;
   padding: 0 20px;
   background: linear-gradient(45deg, hsl(231, 77%, 65%) 20%, hsl(187, 56%, 65%) 100%);
@@ -260,12 +260,13 @@ body {
 @media only screen and (max-width: 519px) {
   .container--buttonPrev {
     position: relative;
-    top: 20px;
+    top: 25px;
   }
 }
 @media only screen and (min-width: 520px) and (max-width: 1023px) {
   .container--buttonPrev {
-    margin-top: 75px;
+    position: relative;
+    top: 25px;
   }
 }
 .survey {

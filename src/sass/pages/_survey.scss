@@ -6,13 +6,14 @@
 @include sm-mobile {
     .container--buttonPrev {
         position: relative;
-        top: 20px;
+        top: 25px;
     }
 }
 
 @include md-tablet {
     .container--buttonPrev {
-        margin-top: 75px;
+        position: relative;
+        top: 25px;
     }
 }
 
