@@ -97,11 +97,12 @@
 
     .container--statement{
         padding: 40px;
+        &.statement__description{
+            height: 175px !important;
+        }
     }
 
-    .statement__description{
-        height: 175px;
-    }
+    
 }
 
 }
