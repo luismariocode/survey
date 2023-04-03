@@ -3,11 +3,23 @@
 @import "../media-queries"; // Media queries --> mobile, tablet, desktop
 
 
-@include sm-mobile{
+@include sm-mobile {
     .container--buttonPrev {
-        margin-top: 100px;
+        position: relative;
+        top: 20px;
     }
 }
+
+@include md-tablet {
+    .container--buttonPrev {
+        margin-top: 75px;
+    }
+}
+
+    
+    
+    
+
 
 
 .survey {
@@ -138,7 +150,7 @@
             margin: 0;
 
             padding: 0 10px;
-            margin-top: 5px;
+            margin-top: 25px;
         }
 
         .statement__description {
