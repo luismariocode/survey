@@ -80,9 +80,6 @@ body {
    ========================================================================== */
 #home {
   display: flex;
-  position: fixed;
-  top: 0;
-  left: 0;
   flex-direction: column;
   margin: auto;
   height: 100vh;
