@@ -2,6 +2,13 @@
 @import "../mixins"; // Mixins
 @import "../media-queries"; // Media queries --> mobile, tablet, desktop
 
+
+@include sm-mobile{
+    .container--buttonPrev {
+        margin-top: 100px;
+}
+
+
 .survey {
     display: flex;
     width: 100%;
@@ -91,7 +98,7 @@
             height: 40px;
             margin: 0;
             padding: 0 10px;
-            margin-top: 50px;
+            margin-top: 10px;
 
             .button__prev {
                 display: block;
