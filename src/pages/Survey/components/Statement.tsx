@@ -30,6 +30,13 @@ const Statement: React.FC<StatementProps> = ({
       setAnswered(true);
     }
 
+       // Mostrar la descripción después de un pequeño retardo
+      const timeoutId = setTimeout(() => {
+        setDescriptionVisible(true);
+      }, 200);
+      return () => {
+        clearTimeout(timeoutId);
+      };
 
 
 
@@ -58,7 +65,7 @@ const Statement: React.FC<StatementProps> = ({
   return (
     <>
       <div className="container--statement">
-        <q className="statement__description hidden">
+      <q className={`statement__description ${descriptionVisible ? "active" : "hidden"}`}>
           {description}
         </q>
         <div className="container__options">
