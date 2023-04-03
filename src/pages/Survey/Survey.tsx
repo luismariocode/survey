@@ -21,29 +21,11 @@ const Survey: React.FC = () => {
 
   const [indexValue, setIndexValue] = useState<IndexValues>(nextQuestionValue);
 
-  
-  
-
   useEffect(() => {
-
-    
-
-    
-
-    
-// Esperar a que la página se recargue y establecer la posición de desplazamiento vertical en 0
-window.onload = function() {
-  // Obtener el objeto document
-  const doc = document.documentElement || document.body;
-  console.log(doc);
-  // Establecer la posición de desplazamiento vertical en 0
-  doc.scrollTop = 0;
-};
-
-
-
-
+    window.scrollTo(0, 0);
   }, []);
+
+  
   
   function handlePrevQuestion() {
     const newIndex = indexValue.indexPath - 1;
