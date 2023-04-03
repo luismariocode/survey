@@ -10,6 +10,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;500&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -535,6 +537,114 @@ body {
   font-size: 1.5rem;
   color: #1a36ce;
   line-height: 0.75rem;
+}
+
+/* ==========================================================================
+   Variables
+   ========================================================================== */
+/* ==========================================================================
+   Global
+   ========================================================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  background-color: #f2f2f2;
+  font-family: "Montserrat", sans-serif;
+  color: #1c1c1c;
+  font-weight: 400;
+  font-size: 3rem;
+  line-height: auto;
+  overflow: hidden;
+}
+
+/* ==========================================================================
+   Components
+   ========================================================================== */
+@keyframes move-left {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: 3px;
+  }
+}
+/* ==========================================================================
+   Media queries
+   ========================================================================== */
+@media only screen and (min-width: 1024px) {
+  .thankyou {
+    width: 60%;
+  }
+}
+@media only screen and (max-width: 519px) {
+  .thankyou {
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 520px) and (max-width: 1023px) {
+  .thankyou {
+    width: 100%;
+  }
+}
+.thankyou {
+  background-color: #fff;
+  width: 100%;
+  height: 100vh;
+  margin: 0 auto;
+}
+.thankyou .thankyou__title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  height: 50%;
+  width: 100%;
+  font-size: 5rem;
+  font-weight: 700;
+  color: #1c1c1c;
+  text-align: center;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+.thankyou .thankyou__title h1 {
+  font-size: 5rem;
+  font-weight: 700;
+  color: #6378EB;
+  text-align: center;
+}
+.thankyou .thankyou__title span {
+  font-size: 3rem;
+  font-weight: 400;
+  color: #1c1c1c;
+  text-align: center;
+}
+
+.container-btn {
+  display: flex;
+  width: 100%;
+  height: 50%;
+  justify-content: center;
+  align-items: center;
+}
+
+.button--validar {
+  background-color: #c3e9ee;
+  border-radius: 25px;
+  border: 5px solid #32a5b3;
+  height: 100px;
+  width: 350px;
+  font-size: 2rem;
+  line-height: 1.9rem;
+  font-weight: 700;
+  color: #32a5b3;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 1px 2px 2px rgba(0, 0, 0, 0.2);
 }
 
 * {
