@@ -148,9 +148,6 @@ body {
 }
 #home .home__info {
   display: block;
-  position: relative;
-  top: 0;
-  left: 0;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
@@ -184,6 +181,7 @@ body {
   justify-content: flex-start;
   align-items: flex-start;
   width: 100%;
+  min-height: 320px;
   height: auto;
   padding-top: 35px;
   box-sizing: content-box;
