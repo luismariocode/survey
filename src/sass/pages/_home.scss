@@ -121,6 +121,9 @@
 
   .container__datos {
     display: flex;
+    position: relative;
+    top: 0;
+    left: 0;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
