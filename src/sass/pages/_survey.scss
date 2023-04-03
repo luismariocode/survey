@@ -2,24 +2,24 @@
 @import "../mixins"; // Mixins
 @import "../media-queries"; // Media queries --> mobile, tablet, desktop
 
-.survey{
+.survey {
     display: flex;
     width: 100%;
     height: 100vh;
     overflow: hidden;
     margin: 0;
     padding: 0;
-    background: rgb(242,242,242);
-    background: linear-gradient(0deg, rgba(242,242,242,1) 0%, rgba(255,255,255,1) 100%);
+    background: rgb(242, 242, 242);
+    background: linear-gradient(0deg, rgba(242, 242, 242, 1) 0%, rgba(255, 255, 255, 1) 100%);
 
-    .survey__container{
+    .survey__container {
         display: flex;
         flex-direction: column;
         width: 100%;
         height: 100%;
 
 
-        .statement{
+        .statement {
             display: block;
             margin-top: 70px;
             // flex-direction: column;
@@ -30,7 +30,7 @@
 
         }
 
-        .survey__header{
+        .survey__header {
             display: flex;
             justify-content: flex-end;
             position: fixed;
@@ -42,9 +42,9 @@
             height: 75px;
             background-color: tomato;
             background-color: $color__secondary-light;
-            box-shadow: inset 0px -1px 5px -3px rgba(0,0,0,0.1);
-            
-            .button__reboot{
+            box-shadow: inset 0px -1px 5px -3px rgba(0, 0, 0, 0.1);
+
+            .button__reboot {
                 width: 40px;
                 height: 40px;
                 cursor: pointer;
@@ -52,38 +52,40 @@
                 margin-right: 5px;
                 background-color: $color__secondary-light;
 
-                & span{
-                  font-size: 2rem;  
-                  color: $color__primary;
-                  line-height: 1.5rem;
+                & span {
+                    font-size: 2rem;
+                    color: $color__primary;
+                    line-height: 1.5rem;
                 }
             }
 
             .survey__count {
-                display: inline-flex; /* o display: flex; */
+                display: inline-flex;
+                /* o display: flex; */
                 justify-content: center;
                 align-items: center;
                 text-align: center;
-                height: 100%; /* asegura que el div tiene una altura definida */
+                height: 100%;
+                /* asegura que el div tiene una altura definida */
                 width: 80px;
                 border: 2px solid $color__light;
                 border-radius: 10px;
                 height: 40px;
-               
+
                 background-color: $color__primary-light;
-                
+
             }
-              
-              .survey__count span {
+
+            .survey__count span {
                 font-size: $font-size__secondary * .7;
                 color: $color__primary-dark;
                 display: inline-block;
                 vertical-align: middle;
-              }
-              
+            }
+
         }
 
-        .container--buttonPrev{
+        .container--buttonPrev {
             display: block;
             width: 100%;
             height: 40px;
@@ -91,7 +93,7 @@
             padding: 0 10px;
             margin-top: 20px;
 
-            .button__prev{
+            .button__prev {
                 display: block;
                 width: 40px;
                 background-color: none;
@@ -102,34 +104,36 @@
                 padding-right: 5px;
                 border-radius: 50%;
 
-                & :hover{
+                & :hover {
                     color: $color__secondary;
                     transition: all 0.2s ease-in-out;
                 }
 
-                & span{
-                position: relative;
-                right: 5px;    
-                font-size: 2rem;  
-                color: $color__primary;
-                line-height: 1.5rem;
+                & span {
+                    position: relative;
+                    right: 5px;
+                    font-size: 2rem;
+                    color: $color__primary;
+                    line-height: 1.5rem;
                 }
 
             }
         }
 
-        .container--statement{
+        .container--statement {
             display: flex;
             flex-direction: column;
             width: 100%;
-            height: 100%;
+            height: auto;
             // justify-content: space-between;
             align-items: center;
+            margin: 0;
+
             padding: 0 10px;
             margin-top: 5px;
         }
 
-        .statement__description{
+        .statement__description {
             display: flex;
             justify-content: center;
             align-items: center;
@@ -139,13 +143,13 @@
             margin: 15px auto;
             padding: 25px;
             border-radius: 10px;
-            font-size: $font-size__secondary*.9 ;
+            font-size: $font-size__secondary*.9;
             background-color: #fff;
             text-align: center;
             color: $color__primary-dark;
         }
 
-        .container__options{
+        .container__options {
             display: block;
             width: 100%;
             height: auto;
@@ -155,7 +159,7 @@
             // border: 1px solid $color__primary;
         }
 
-        .statement__options{
+        .statement__options {
             display: inline-flex;
             width: 75%;
             height: 80px;
@@ -167,7 +171,7 @@
             background-color: $color__secondary-light;
             padding: 20px;
 
-            .option{
+            .option {
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -183,12 +187,41 @@
 
         }
 
+      
+
 
     }
 
+    
+    .container--buttons-bottom{
+        display: block;
+        width: 100%;
+        height: 65px;
+        text-align: center;
+        // border: 1px solid red;
+        margin-top: 15px;
+
+        .button--next{
+            background-color: $color__light;
+            color: $color__primary-dark;
+            font-weight: 700;
+            border: none;
+            height: 40px;
+            padding: 5px 0;
+
+            .material-symbols-sharp{
+                @include move-left;
+                font-size: 1.2rem;
+                color: $color__primary-dark;
+                line-height: 1.5rem;
+            }
+        }
+       
+    }
 
 
 }
+
 // .survey{
 //     display: flex;
 //     height: 100vh;
@@ -226,7 +259,7 @@
 //             color: $color__primary-dark;
 //             border: 2px solid $color__primary-dark;
 //             margin-right: 10px;
-            
+
 //         }
 //     }
 
@@ -273,9 +306,9 @@
 //             cursor: pointer;
 //             color: $color__secondary-dark;
 //             transition: all 0.2s ease-in-out;
-            
 
-            
+
+
 //             &:hover{
 //                 color: $color__primary;
 //                 margin-bottom: 25px;
@@ -309,7 +342,7 @@
 //         justify-content: flex-end;
 //         align-items: center;
 //         margin-top: 20px;
-     
+
 //         font-size: 2rem;
 //         border-radius: $border-radius__buttons;
 //         // align-self: baseline;
@@ -325,7 +358,7 @@
 //             border-radius: 10px;
 //             font-size: 1.7rem;
 //             border: 2px solid $color__secondary-dark;
-           
+
 //             cursor: pointer;
 //             color: $color__primary;
 //             transition: all 0.3s ease-in-out;
@@ -338,7 +371,7 @@
 
 //         }
 //     }
-    
+
 // }
 
 
