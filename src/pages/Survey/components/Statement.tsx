@@ -12,6 +12,7 @@ const Statement: React.FC<StatementProps> = ({
   number,
   newIndex,
   options,
+  
 }) => {
   const { paramIndex } = useParams<{ paramIndex: string }>();
   const [selectedOption, setSelectedOption] = useState<string>("");
@@ -74,7 +75,7 @@ const Statement: React.FC<StatementProps> = ({
 
   return (
     <>
-      <div className="container--statement">
+      <div className="container--statement" data-answered={answered}>
       <q className={`statement__description ${descriptionVisible ? "active" : "hidden"}`}>
           {description}
         </q>

@@ -21,7 +21,19 @@ const Survey: React.FC = () => {
 
   const [indexValue, setIndexValue] = useState<IndexValues>(nextQuestionValue);
 
+  
+  
 
+  useEffect(() => {
+
+    const data = localStorage.getItem("entries") ? JSON.parse(localStorage.getItem("entries") || "{}") : {};
+
+    console.log(data);
+
+
+
+  }, [dataSurvey.entries]);
+  
   function handlePrevQuestion() {
     const newIndex = indexValue.indexPath - 1;
     localStorage.setItem("nextQuestion", JSON.stringify({ indexPath: newIndex, indexRender: newIndex - 1 }));
@@ -81,11 +93,9 @@ const Survey: React.FC = () => {
               <Outlet />
               <div className="statement">
               <div className="container--buttonPrev">
-                {indexValue.indexPath > 1 &&
-  	              <ButtonPrev onClick={handlePrevQuestion}></ButtonPrev>
-                }
+                {indexValue.indexPath > 1 && <ButtonPrev onClick={handlePrevQuestion}></ButtonPrev>}
               </div> 
-            
+
               <Statement
                 key={dataSurvey[indexValue.indexRender].entrie}
                 entrie={dataSurvey[indexValue.indexRender].entrie}
@@ -102,7 +112,14 @@ const Survey: React.FC = () => {
                   Validar
                 </button>
               ) : (
-                <ButtonNext onClick={handleNextQuestion} disabled={!dataSurvey[indexValue.indexRender].entrie} />
+                
+                <>
+                {
+                 
+                }
+                <ButtonNext onClick={handleNextQuestion} disabled={false} />
+                </>
+                
 
               )}
               </div>

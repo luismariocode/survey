@@ -258,17 +258,63 @@ body {
    Media queries
    ========================================================================== */
 @media only screen and (max-width: 519px) {
-  .container--buttonPrev {
+  .main .survey__header {
+    position: fixed;
+    height: 75px;
+  }
+  .main .container--statement {
+    padding: 0 10px;
+  }
+  .main .container--buttonPrev {
     position: relative;
     top: 25px;
+    padding: 0 10px;
+    margin-top: 50px;
+  }
+  .main .statement {
+    margin-top: 90px;
   }
 }
 @media only screen and (min-width: 520px) and (max-width: 1023px) {
-  .container--buttonPrev {
+  .main .survey__header {
+    position: fixed;
+    height: 75px;
+  }
+  .main .container--buttonPrev {
     position: relative;
     top: 25px;
+    padding: 0 10px;
+    margin-top: 50px;
+  }
+  .main .container--statement {
+    padding: 0 10px;
+  }
+  .main .statement {
+    margin-top: 75px;
   }
 }
+@media only screen and (min-width: 1024px) {
+  .main .survey {
+    width: 60%;
+    margin: 0 auto;
+  }
+  .main .survey__header {
+    position: relative;
+    height: 100px;
+  }
+  .main .container--buttonPrev {
+    position: relative;
+    top: 25px;
+    padding: 0 40px;
+  }
+  .main .statement {
+    margin-top: 10px;
+  }
+  .main .container--statement {
+    padding: 40px;
+  }
+}
+
 .survey {
   display: flex;
   width: 100%;
@@ -279,6 +325,10 @@ body {
   background: rgb(242, 242, 242);
   background: linear-gradient(0deg, rgb(242, 242, 242) 0%, rgb(255, 255, 255) 100%);
 }
+.survey .container--statement[data-answered=false] + .container--buttons-bottom > .button--next {
+  visibility: hidden;
+  opacity: 0;
+}
 .survey .survey__container {
   display: flex;
   flex-direction: column;
@@ -287,21 +337,22 @@ body {
 }
 .survey .survey__container .statement {
   display: block;
-  margin-top: 70px;
+  margin-top: 10px;
   width: 100%;
   height: 100%;
 }
 .survey .survey__container .survey__header {
   display: flex;
   justify-content: flex-end;
-  position: fixed;
+  position: relative;
   top: 0;
   left: 0;
   align-items: center;
   padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   width: 100%;
-  height: 75px;
-  background-color: tomato;
+  height: 100px;
   background-color: #c3e9ee;
   box-shadow: inset 0px -1px 5px -3px rgba(0, 0, 0, 0.1);
 }
@@ -343,8 +394,8 @@ body {
   width: 100%;
   height: 40px;
   margin: 0;
-  padding: 0 10px;
-  margin-top: 25px;
+  padding: 0 40px;
+  margin-top: 5px;
 }
 .survey .survey__container .container--buttonPrev .button__prev {
   display: block;
@@ -375,7 +426,7 @@ body {
   height: auto;
   align-items: center;
   margin: 0;
-  padding: 0 10px;
+  padding: 0 40px;
   margin-top: 25px;
 }
 .survey .survey__container .statement__description {
@@ -456,12 +507,15 @@ body {
   margin-top: 15px;
 }
 .survey .container--buttons-bottom .button--next {
+  visibility: visible;
+  opacity: 1;
   background-color: #f2f2f2;
   color: #1a36ce;
   font-weight: 700;
   border: none;
   height: 40px;
   padding: 5px 0;
+  transition: all 0.3s ease-in-out;
 }
 .survey .container--buttons-bottom .button--next .material-symbols-sharp {
   animation: move-left 1s ease-in-out infinite;
