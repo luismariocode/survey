@@ -144,9 +144,7 @@
             padding: 25px;
             border-radius: 10px;
             font-size: $font-size__secondary*.9;
-           
             text-align: center;
-           
 
             &::after , &::before {
                 content: "";
@@ -156,14 +154,14 @@
                 color: $color__primary-light;
                 background-color: $color__primary-light;
                 border: 3px solid $color__primary;
-                transition: all .3s ease-in-out;
+                transition: all .2s ease-in-out;
             }
 
             &.active{
                 color: $color__primary-dark;
                 background-color: #fff;
                 border: 3px solid $color__primary;
-                transition: all .3s ease-in-out;
+                transition: all .2s ease-in-out;
             }
         }
 

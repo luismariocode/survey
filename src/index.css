@@ -386,13 +386,13 @@ body {
   color: #bdc6f7;
   background-color: #bdc6f7;
   border: 3px solid #6378EB;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 .survey .survey__container .statement__description.active {
   color: #1a36ce;
   background-color: #fff;
   border: 3px solid #6378EB;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 .survey .survey__container .container__options {
   display: block;
