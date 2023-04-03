@@ -77,6 +77,7 @@ const User: React.FC = () => {
                 handleKeyPress(event, handleSaveEntries, isValid)
               }
               placeholder="Nombre Completo"
+              autoComplete="off"
               required
             />
           </div>
