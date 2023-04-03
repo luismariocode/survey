@@ -393,6 +393,10 @@ body {
 }
 
 body {
+  display: block;
+  position: relative;
+  top: 0;
+  left: 0;
   padding: 0;
   background-color: #f2f2f2;
   font-family: "Montserrat", sans-serif;
@@ -404,10 +408,10 @@ body {
 }
 
 #root {
-  display: block;
-  position: relative;
-  top: 0;
+  position: fixed;
+  bottom: 0;
   left: 0;
+  right: 0;
   overflow: hidden;
   height: 100vh;
   width: 100vw;
