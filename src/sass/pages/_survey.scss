@@ -34,6 +34,13 @@
     .statement{
         margin-top: 90px;
     }
+
+    .container--statement{
+        
+        &.statement__description{
+            height: 300px ;
+        }
+    }
 }
 
 @include md-tablet {
@@ -55,9 +62,18 @@
         margin-top: 50px;
     }
 
-    
+    .statement{
+        margin-top: -10px;
+    }
+
+   
+
+
     .container--statement{
-        padding: 0 10px;
+
+        &.statement__description{
+            height: 300px;
+        }
    }
 
     .statement{
@@ -76,7 +92,6 @@
         position: relative;
         height: 100px;
         background-color: $color__secondary-light;
-      
         // border: 1px solid tomato;
     }
 
@@ -252,7 +267,7 @@
             margin: 0;
 
             padding: 0 40px;
-            margin-top: 25px;
+            margin-top: -10;
         }
 
         .statement__description {
@@ -260,7 +275,7 @@
             justify-content: center;
             align-items: center;
             width: 100%;
-            height: 300px;
+            height: 175px;
             
             margin: 15px auto;
             padding: 25px;
