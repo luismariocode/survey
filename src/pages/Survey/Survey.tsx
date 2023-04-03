@@ -28,13 +28,14 @@ const Survey: React.FC = () => {
 
     
 
-    location.reload();
+    
 
+    
 // Esperar a que la página se recargue y establecer la posición de desplazamiento vertical en 0
 window.onload = function() {
   // Obtener el objeto document
   const doc = document.documentElement || document.body;
-
+  console.log(doc);
   // Establecer la posición de desplazamiento vertical en 0
   doc.scrollTop = 0;
 };
