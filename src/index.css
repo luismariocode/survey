@@ -370,6 +370,7 @@ body {
   padding: 0;
   margin-right: 5px;
   background-color: #fff;
+  border: none;
 }
 .survey .survey__container .survey__header .button__reboot span {
   font-size: 2rem;
