@@ -80,7 +80,7 @@ body {
    ========================================================================== */
 #home {
   display: flex;
-  position: fixed;
+  position: relative;
   top: 0;
   left: 0;
   flex-direction: column;
@@ -94,9 +94,6 @@ body {
 }
 @media only screen and (min-width: 520px) and (max-width: 1023px) {
   #home {
-    position: fixed;
-    top: 0;
-    left: 0;
     padding-top: 2%;
     padding-bottom: 25%;
     padding-left: 15%;
