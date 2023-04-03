@@ -35,12 +35,10 @@
         margin-top: 90px;
     }
 
-    .container--statement{
-        
-        &.statement__description{
-            height: 300px ;
-        }
+    .statement__description{
+        height: 300px;
     }
+
 }
 
 @include md-tablet {
@@ -69,12 +67,11 @@
    
 
 
-    .container--statement{
 
-        &.statement__description{
+    .statement__description{
             height: 300px;
         }
-   }
+
 
     .statement{
         margin-top: 75px;
@@ -267,7 +264,7 @@
             margin: 0;
 
             padding: 0 40px;
-            margin-top: -10;
+            margin-top: 25px;
         }
 
         .statement__description {

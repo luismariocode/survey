@@ -280,7 +280,7 @@ body {
   .main .statement {
     margin-top: 90px;
   }
-  .main .container--statement.statement__description {
+  .main .statement__description {
     height: 300px;
   }
 }
@@ -300,7 +300,7 @@ body {
   .main .statement {
     margin-top: -10px;
   }
-  .main .container--statement.statement__description {
+  .main .statement__description {
     height: 300px;
   }
   .main .statement {
@@ -449,7 +449,7 @@ body {
   align-items: center;
   margin: 0;
   padding: 0 40px;
-  margin-top: -10;
+  margin-top: 25px;
 }
 .survey .survey__container .statement__description {
   display: flex;
