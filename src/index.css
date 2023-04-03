@@ -280,6 +280,9 @@ body {
   .main .statement {
     margin-top: 90px;
   }
+  .main .container--statement.statement__description {
+    height: 300px;
+  }
 }
 @media only screen and (min-width: 520px) and (max-width: 1023px) {
   .main .survey__header {
@@ -294,8 +297,11 @@ body {
     padding: 0 10px;
     margin-top: 50px;
   }
-  .main .container--statement {
-    padding: 0 10px;
+  .main .statement {
+    margin-top: -10px;
+  }
+  .main .container--statement.statement__description {
+    height: 300px;
   }
   .main .statement {
     margin-top: 75px;
@@ -320,10 +326,13 @@ body {
     padding: 0 40px;
   }
   .main .statement {
-    margin-top: 10px;
+    margin-top: -10px;
   }
   .main .container--statement {
     padding: 40px;
+  }
+  .main .container--statement.statement__description {
+    height: 175px;
   }
 }
 
@@ -440,14 +449,14 @@ body {
   align-items: center;
   margin: 0;
   padding: 0 40px;
-  margin-top: 25px;
+  margin-top: -10;
 }
 .survey .survey__container .statement__description {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 300px;
+  height: 175px;
   margin: 15px auto;
   padding: 25px;
   border-radius: 10px;
