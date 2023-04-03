@@ -199,6 +199,17 @@
                 border: 2px solid $color__secondary-dark;
                 color: $color__primary;
                 box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
+
+                &.option-label {
+                    cursor: pointer;
+                }
+
+                &:has(.selected){
+                    background-color: $color__primary;
+                    color: #fff;
+                    transition: all .2s ease-in-out;
+                    
+                }
             }
 
         }

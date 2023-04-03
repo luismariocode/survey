@@ -53,10 +53,20 @@ const Statement: React.FC<StatementProps> = ({
       ...entryValues,
       [entrie]: newValue,
     };
+
+
+
+
+
     localStorage.setItem("entries", JSON.stringify(newEntryValues));
     setEntryValues(newEntryValues);
 
-
+      // Agregar la clase "selected" al label del option seleccionado
+        // Agregar la clase "selected" al label del option seleccionado
+  const selectedLabel = changeEvent.target.parentNode as HTMLLabelElement;
+  const allLabels = document.querySelectorAll(`label.option-label`);
+  allLabels.forEach((label) => label.classList.remove("selected"));
+  selectedLabel.classList.add("selected");
 
 
 
