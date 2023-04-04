@@ -659,6 +659,48 @@ body {
   box-shadow: 0 1px 2px 2px rgba(0, 0, 0, 0.2);
 }
 
+.modal-check {
+  min-width: 280px;
+}
+.modal-check .modal-check--icon {
+  font-size: 3rem;
+  color: #6378EB;
+  width: 100%;
+  margin: 5% auto;
+  text-align: center;
+}
+.modal-check h2 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #6378EB;
+  text-align: center;
+  margin: 0 auto;
+  width: 100%;
+  margin: 0 auto;
+}
+.modal-check a {
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-size: 1.5rem;
+  margin: 50px auto;
+  text-decoration: none;
+  color: orange;
+  cursor: pointer;
+}
+.modal-check a .modal-check--home {
+  font-size: 2rem;
+  position: relative;
+  top: 5px;
+  line-height: 0.5rem;
+}
+.modal-check a .modal-check--link {
+  color: orange;
+  text-decoration: none;
+  font-weight: 700;
+  line-height: 1rem;
+}
+
 * {
   scroll-behavior: smooth;
 }
