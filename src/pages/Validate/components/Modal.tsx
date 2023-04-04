@@ -3,8 +3,8 @@
 const Modal = () => { 
 
   return (
-    <div className="modal">
-        <span>icono</span>
+    <div className="modal-check modal--reboot modal--hidden">
+        <span className="material-symbols-outlined">check</span>
         <h2>¡Test completado!<br/>
         Gracias por tus respuestas.
         </h2>
