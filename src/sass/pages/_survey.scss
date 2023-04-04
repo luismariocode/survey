@@ -131,6 +131,8 @@
 
     .container--statement[data-answered='false'] {
 
+        min-width: 300px;
+
         & + .container--buttons-bottom {
 
             & > .button--next {
