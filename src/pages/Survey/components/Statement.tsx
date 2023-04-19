@@ -34,7 +34,7 @@ const Statement: React.FC<StatementProps> = ({
        // Mostrar la descripción después de un pequeño retardo
       const timeoutId = setTimeout(() => {
         setDescriptionVisible(true);
-      }, 200);
+      }, 500);
       return () => {
         clearTimeout(timeoutId);
       };
@@ -77,11 +77,16 @@ const Statement: React.FC<StatementProps> = ({
     <>
       <div className="container--statement" data-answered={answered}>
       <q className={`statement__description ${descriptionVisible ? "active" : "hidden"}`}>
-          {description}
+      {!descriptionVisible ? (
+        <div className="container-loading">
+          <div className="loading">
+          </div>
+        </div>
+      ) : (<>{description}</>)}
         </q>
         <div className="container__options">
           <div className="statement__options">
-            {options.map((option) => {
+            { descriptionVisible ? ( options.map((option) => {
               return (
                 <div key={option.label} className="option">
                   <label className="option-label" htmlFor={option.label}>
@@ -99,8 +104,8 @@ const Statement: React.FC<StatementProps> = ({
                     />
                   </label>
                 </div>
-              );
-            })}
+              );})) : (<></>)
+            }
           </div>
         </div>
       </div>

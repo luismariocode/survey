@@ -107,9 +107,6 @@ const Survey: React.FC = () => {
               ) : (
                 
                 <>
-                {
-                 
-                }
                 <ButtonNext onClick={handleNextQuestion} disabled={false} />
                 </>
                 
