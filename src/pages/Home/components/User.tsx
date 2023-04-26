@@ -3,6 +3,8 @@ import ButtonStart from "./ButtonStart";
 import { useLocation, useNavigate, } from "react-router-dom";
 import { handleKeyPress , isValidMail } from "../scripts/scripts";
 import { EntryValues, IndexValues } from "../types/types";
+import  imageHype   from "../../../assets/hype.png";
+import  imageRPM   from "../../../assets/rpm.png";
 
 const User: React.FC = () => {
   const location = useLocation()
@@ -97,8 +99,16 @@ const User: React.FC = () => {
             />
           </div>
 
+          
+
           <div className="container__btn--empezar">  
             <ButtonStart onClick={handleSaveEntries} disabled={!isValid} />
+          </div>
+
+          <div className="container--logos">
+              <div className="container-logo"><img  className='img-logo--hype' src={imageHype}/></div>
+              
+              <div className="container-logo"><img  className='img-logo--rpm' src={imageRPM}/></div>
           </div>
         
       </div>

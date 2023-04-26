@@ -47,16 +47,11 @@ const Home = () => {
         <section id="home" className="home">
           <div className="home__info">
             <div className="home__title">
-              <h1>
-                Test de<br />
-                Inteligencia<br />
-                Múltiple<br />
-              </h1>
+              <h1>Test de Inteligencia Múltiple</h1>
             </div>
             <div className="home__subtitle">
-              <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet,
-                molestias quia. Beatae esse, hic ipsum voluptas error tenetur!
+              <p> <strong>BIENVENID@</strong>
+              <br/>Lee cada declaración detenidamente, si se aplica a tí, selecciona SÍ. En caso de que no estés de acuerdo o no aplica para tí, responde NO. Recuerda, la prueba sólo será precisa si eres honest@ contigo mism@, así que contesta basándote en lo que realmente piensas y sientes, no en cómo creas que deberías o quieres sentirte.
               </p>
             </div>
           </div>

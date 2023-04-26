@@ -7,6 +7,8 @@ import ButtonReboot from "./components/ButtonReboot";
 import ModalReboot from "./components/ModalReboot";
 import ButtonPrev from "./components/ButtonPrev";
 import ButtonNext from "./components/ButtonNext";
+import  imageHype   from "../../assets/hype.png";
+import  imageRPM   from "../../assets/rpm.png";
 
 
 
@@ -119,6 +121,13 @@ const Survey: React.FC = () => {
           }
         />
       </Routes>
+
+      <div className="container-logos--survey">
+              <div className="container-logo container-logo--hype"><img  className='img-logo--hype' src={imageHype}/></div>
+              
+              <div className="container-logo container-logo--rpm"><img  className='img-logo--rpm' src={imageRPM}/></div>
+          </div>
+
     </div>
   );
 };

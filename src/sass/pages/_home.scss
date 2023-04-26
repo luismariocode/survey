@@ -38,8 +38,8 @@
     }
 
     h1{
-      font-size: $font-size__primary * 1.5;
-      line-height: $font-size__primary * 1.5;
+      font-size: $font-size__primary * .5;
+      line-height: $font-size__primary * .5;
     }
   }
 
@@ -49,7 +49,10 @@
     padding-left: 0;
     padding-right: 0;
 
-
+    h1{
+      font-size: $font-size__primary * 1;
+      line-height: $font-size__primary * 1;
+    }
 
 
     button{
@@ -62,7 +65,11 @@
       }
     }
 
-    .home__info , .home__data{
+    .home__info {
+      padding-top: 5%;
+    }
+
+    .home__data{
       padding-top: 25%;
     }
 
@@ -111,11 +118,12 @@
   .home__title {
     padding-top: 1rem;
     width: 100%;
+    padding-bottom: .7rem;
     // border: 2px solid blue;
   }
 
   .home__subtitle {
-    margin-top:1rem;
+    // margin-top:1rem;
     width: 100%;
     
   }
