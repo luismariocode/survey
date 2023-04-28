@@ -47,7 +47,7 @@ const Home = () => {
         <section id="home" className="home">
           <div className="home__info">
             <div className="home__title">
-              <h1>Test de Inteligencia Múltiple</h1>
+              <h1>Test de Inteligencias Múltiples</h1>
             </div>
             <div className="home__subtitle">
               <p> <strong>BIENVENID@</strong>

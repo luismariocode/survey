@@ -15,12 +15,23 @@
   background: linear-gradient(45deg, hsla(231, 77%, 65%, 1) 20%, hsla(187, 56%, 65%, 1) 100%);
 
 
+  
+  
+
+
+
   .home__info{
     position: relative;
     height: 50vh;
     width: 100%;
     position: 0;
     left: 0;
+
+    @include lg-desktop {
+      padding-top: 15%;
+    }
+
+
   }
 
 
@@ -49,6 +60,7 @@
     padding-left: 0;
     padding-right: 0;
 
+
     h1{
       font-size: $font-size__primary * 1;
       line-height: $font-size__primary * 1;
@@ -66,7 +78,7 @@
     }
 
     .home__info {
-      padding-top: 5%;
+      padding-top: 20%;
     }
 
     .home__data{

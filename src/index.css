@@ -98,6 +98,11 @@ body {
   position: 0;
   left: 0;
 }
+@media only screen and (min-width: 1024px) {
+  #home .home__info {
+    padding-top: 15%;
+  }
+}
 @media only screen and (min-width: 520px) and (max-width: 1023px) {
   #home {
     padding-top: 2%;
@@ -131,7 +136,7 @@ body {
     transition: all 0.2s ease-in-out;
   }
   #home .home__info {
-    padding-top: 5%;
+    padding-top: 20%;
   }
   #home .home__data {
     padding-top: 25%;
@@ -966,18 +971,15 @@ button span:last-child {
 }
 .container--logos, .container-logos--survey {
   position: fixed;
-  background: #fff;
-  width: 40%;
+  width: 50%;
   height: 75px;
-  border-radius: 15px;
-  bottom: 75px;
+  bottom: 0;
+  left: 50%;
   display: grid;
   grid-template-columns: 1fr 1fr;
   padding: 5px;
   justify-content: center;
   justify-content: unset;
-  border: 2px solid hsl(231, 77%, 65%);
-  box-shadow: 1px 4px 5px 0px rgba(0, 0, 0, 0.36);
 }
 @media only screen and (max-width: 519px) {
   .container--logos, .container-logos--survey {
